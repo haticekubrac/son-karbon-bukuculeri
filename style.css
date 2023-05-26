@@ -31,6 +31,6 @@ a {
 }
 
 .highlighted {
-    background: linear-gradient(to bottom, transparent 50%, rgb(0, 0, 0) 50%);
+    background: linear-gradient(to bottom, transparent 50%, green 50%);
 }
 
