@@ -8,10 +8,29 @@ body {
 }
 
 
-.section {
+.home-section {
     background: url(fotograflar/deep-forest-green-watercolor-background_54887-112.png);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.image-overlay{
+    height: 100vh;
+    background: rgba(2, 21, 13, 0.622)
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+.home-text {
+    background-color: linear-gradient(#08FF97  0%, rgba(0, 255, 148, 0.6934)  35.18%, #93CCDE 57.63%, #00F0FF  99.99%, rgba(0, 255, 148, 0)  100%);    
+}
+
+.highlighted {
+    background: linear-gradient(to bottom, transparent 50%, rgb(0, 0, 0) 50%);
+}
+
