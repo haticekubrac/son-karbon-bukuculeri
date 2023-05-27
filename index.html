@@ -13,26 +13,26 @@
     <div class="container-fluid">
       <img style="position: relative z-index1; width: 70px; height: 70px;" src="fotograflar/cartoon-earth-png-transparent-background-earth-clipart-11562852243wspgoxqalx.png" alt="">
       &nbsp;&nbsp;&nbsp;
-      <a class="navbar-brand text" href="#"><b>CarbonWise</b></a>
+      <a class="navbar-brand text text-white " href="#"><b>CarbonWise</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text cool-link" href="index.html#blog">Blog</a>
+            <a class="nav-link active text text-white cool-link cool-link-white" href="index.html#blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text cool-link" href="index.html#blog">SSS</a>
+            <a class="nav-link active text text-white cool-link-white" href="index.html#blog">SSS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text cool-link" aria-current="page" href="#">Satın Al</a>
+            <a class="nav-link active text text-white cool-link-white" aria-current="page" href="#">Satın Al</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link active text cool-link" href="hakkımızda.html">Hakkımızda</a>
+            <a class="nav-link active text text-white cool-link-white" href="hakkımızda.html">Hakkımızda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text cool-link" href="index.html#blog"><b>Giriş Yap</b></a>
+            <a class="nav-link active text text-white cool-link-white" href="index.html#blog"><b>Giriş Yap</b></a>
           </li>
         </ul>
       </div>
@@ -242,11 +242,15 @@
                 navEl.classList.add("navbar-scrolled")
                 navTexts.forEach(navText => {
                     navText.classList.remove("text-white")
+                    navText.classList.remove("cool-link-white")
+                    navText.classList.add("cool-link")
                 })
             } else if (window.scrollY < 75) {
                 navEl.classList.remove("navbar-scrolled");
                 navTexts.forEach(navText => {
                     navText.classList.add("text-white")
+                    navText.classList.add("cool-link-white")
+                    navText.classList.remove("cool-link")
                 })
 
             }
