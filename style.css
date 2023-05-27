@@ -32,6 +32,7 @@ a {
     background: linear-gradient(90deg, rgba(8, 255, 151, 1) 0%, rgba(0, 255, 148, 0.69) 35%, rgba(147, 204, 222, 1) 58%, rgba(0, 240, 255, 1) 99.99%, rgba(0, 255, 148, 0) 100%);
     color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /* Vavnar linklerin altındaki çizgi effectleri  */
