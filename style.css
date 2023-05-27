@@ -51,7 +51,17 @@ a {
   
   .cool-link:hover::after {
     width: 100%;
-    //transition: width .3s;
+    transition: width .3s;
   }
 
 
+.navbar-scrolled {
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(52, 51, 51, 0.15);
+    color: white
+}
+
+
+.navbar {
+    transition: background-color 0.5s, box-shadow 0.5s 
+}
