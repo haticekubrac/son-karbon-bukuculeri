@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-
+/* homepage */
 .home-section {
     background: url(fotograflar/deep-forest-green-watercolor-background_54887-112.png);
     height: 100vh;
@@ -89,3 +89,11 @@ a {
     transition: background-color 0.5s, box-shadow 0.5s 
 }
 
+/* beslenme alışkanlıkları sayfası */
+.beslenme-section {
+    background: url(fotograflar/beslenme.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
