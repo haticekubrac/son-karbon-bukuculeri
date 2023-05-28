@@ -10,209 +10,107 @@
 </head>
 <body>
 <!--navbar-->
-<nav class="navbar fixed-top navbar-expand-lg text-opacity-50">
+  <nav class="navbar fixed-top navbar-expand-lg bg-white bg-opacity-50">
     <div class="container-fluid">
       <img style="position: relative z-index1; width: 70px; height: 70px;" src="fotograflar/cartoon-earth-png-transparent-background-earth-clipart-11562852243wspgoxqalx_transparent.png" alt="">
       &nbsp;&nbsp;&nbsp;
-      <a class="navbar-brand text-white " href="#"><b>CarbonWise</b></a>
+      <a class="navbar-brand text-black " href="#"><b>CarbonWise</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text text-white cool-link cool-link-white" href="index.html#blog">Blog</a>
+            <a class="nav-link active text text-black cool-link cool-link" href="index.html#blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text text-white cool-link-white" href="index.html#blog">SSS</a>
+            <a class="nav-link active text text-black cool-link" href="index.html#blog">SSS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text text-white cool-link-white" aria-current="page" href="#">Satın Al</a>
+            <a class="nav-link active text text-black cool-link" aria-current="page" href="#">Satın Al</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link active text text-white cool-link-white" href="hakkımızda.html">Hakkımızda</a>
+            <a class="nav-link active text text-black cool-link" href="hakkımızda.html">Hakkımızda</a>
           </li>
          <li class="nav-item">
-            <!DOCTYPE html>
-            <html>
-            <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-            body {font-family: Arial, Helvetica, sans-serif;}
-            
-            /* Full-width input fields */
-            input[type=text], input[type=password] {
-              width: 100%;
-              padding: 12px 20px;
-              margin: 8px 0;
-              display: inline-block;
-              border: 1px solid #962626;
-              box-sizing: border-box;
-            }
-            
-            /* Set a style for all buttons */
-            button {
-              background-color: #04AA6D;
-              color: white;
-              padding: 10px 16px;
-              margin: 8px 0;
-              border: none;
-              cursor: pointer;
-              width: 100%;
-            }
-            
-            button:hover {
-              opacity: 0.8;
-            }
-            
-            /* Extra styles for the cancel button */
-            .cancelbtn {
-              width: auto;
-              padding: 10px 18px;
-              background-color: #f44336;
-            }
-            
-            /* Center the image and position the close button */
-            .imgcontainer {
-              text-align: center;
-              margin: 24px 0 12px 0;
-              position: relative;
-            }
-            
-            img.avatar {
-              width: 40%;
-              border-radius: 50%;
-            }
-            
-            .container {
-              padding: 16px;
-            }
-            
-            span.psw {
-              float: right;
-              padding-top: 16px;
-            }
-            
-            /* The Modal (background) */
-            .modal {
-              display: none; /* Hidden by default */
-              position: fixed; /* Stay in place */
-              z-index: 1; /* Sit on top */
-              left: 0;
-              top: 0;
-              width: 100%; /* Full width */
-              height: 100%; /* Full height */
-              overflow: auto; /* Enable scroll if needed */
-              background-color: rgb(0,0,0); /* Fallback color */
-              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-              padding-top: 60px;
-            }
-            
-            /* Modal Content/Box */
-            .modal-content {
-              background-color: #fefefe;
-              margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-              border: 1px solid #888;
-              width: 80%; /* Could be more or less, depending on screen size */
-            }
-            
-            /* The Close Button (x) */
-            .close {
-              position: absolute;
-              right: 25px;
-              top: 0;
-              color: #000;
-              font-size: 35px;
-              font-weight: bold;
-            }
-            
-            .close:hover,
-            .close:focus {
-              color: red;
-              cursor: pointer;
-            }
-            
-            /* Add Zoom Animation */
-            .animate {
-              -webkit-animation: animatezoom 0.6s;
-              animation: animatezoom 0.6s
-            }
-            
-            @-webkit-keyframes animatezoom {
-              from {-webkit-transform: scale(0)} 
-              to {-webkit-transform: scale(1)}
-            }
-              
-            @keyframes animatezoom {
-              from {transform: scale(0)} 
-              to {transform: scale(1)}
-            }
-            
-            /* Change styles for span and cancel button on extra small screens */
-            @media screen and (max-width: 300px) {
-              span.psw {
-                 display: block;
-                 float: none;
-              }
-              .cancelbtn {
-                 width: 100%;
-              }
-            }
-            </style>
-            </head>
-            <body>
-            
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Giriş</button>
-            
-            <div id="id01" class="modal">
-              
-              <form class="modal-content animate" action="/action_page.php" method="post">
-                <div class="imgcontainer">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                </div>
-            
-                <div class="container">
-                  <label for="name-surname"><b>İsim-Soyisim</b></label>
-                  <input type="text" placeholder="İsim-Soyisim" name="name-surname" required>
-            
-                  <label for="uname"><b>Mail</b></label>
-                  <input type="text" placeholder="Mail" name="uname" required>
-            
-                  <label for="psw"><b>Şifre</b></label>
-                  <input type="password" placeholder="Şifre" name="psw" required>
-                    
-                  <button type="submit">Giriş</button>
-                  <label>
-                    <input type="checkbox" checked="Beni hatırla" name="remember"> Beni hatırla
-                  </label>
-                </div>
-            
-                <div class="container" style="background-color:#f1f1f1">
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">kapat</button>
-                </div>
-              </form>
-            </div>
-            
-            <script>
-            // Get the modal
-            var modal = document.getElementById('id01');
-            
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-            </script>
-            
-            </body>
-            </html>
-            
-          </li>
-        </ul>
-      </div>
-    </div>
   </nav>
-<!--navbar-->    
+<!--navbar-->
+
+<!--test content-->
+<div class="ulaşım-section">
+  <div class="bosluk-25">
+    <h2 style="position: relative; bottom: -200px; text-align: center;">Ulaşım Alışkanlıkları</h2>
+  </div>
+
+    <div id="carouselBeslenme" class="carousel slide w-50 h-50 mx-auto" style="padding: 40px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselBeslenme" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselBeslenme" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselBeslenme" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="text-align: center;">
+        <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4> <br>
+        <div class="container">
+          <div class="slider">
+            <span>Hiç</span>
+            <input id="beslenme1" type="range" value="0" min="0" max="10" step="1">
+            <span>Sıklıkla</span>
+          </div>
+          <div class="moji">😄</div>
+        </div>
+        </div>
+    </div>    
+      <div class="carousel-item" style="text-align: center;">
+        <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4> <br>
+        <div class="container">
+          <div class="slider">
+            <span>Hiç</span>
+            <input id="beslenme2" type="range" value="0" min="0" max="10" step="1">
+            <span>Sıklıkla</span>
+          </div>
+          <div class="moji">😄</div>
+        </div>
+        </div>
+        <div class="carousel-item" style="text-align: center;">
+          <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4> <br>
+          <div class="container">
+            <div class="slider">
+              <span>Hiç</span>
+              <input id="beslenme3" type="range" value="0" min="0" max="10" step="1">
+              <span>Sıklıkla</span>
+            </div>
+            <div class="moji">😄</div>
+            <a href="enerji-tüketimi-alışkanlıkları.html"><button type="button" class="btn btn-outline-info">Devam etmek için tıkla!</button></a>
+          </div>
+          </div>
+    
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBeslenme" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBeslenme" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden" style="outline: black; border: 1px solid black;">Next</span>
+            </button>    
+    </div>
+
+      
+    </div>
+
+<!--test content-->
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-dark" target="_blank" href="index.html">carbonwise.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="test.js"></script>
 </body>
 </html>
+
