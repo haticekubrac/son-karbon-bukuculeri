@@ -98,3 +98,39 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+*/
+
+.carousel-control-next,
+.carousel-control-prev , .carousel-indicators  {
+    filter: invert(100%);
+}
+
+#carouselBeslenme {
+  height: 50%;
+  width: 50%;
+}
+
+.bosluk-25 {
+  height: 25%;
+}
+
+.carousel-inner {
+  position: relative;
+  bottom: -50px;
+}
+
+.carousel-indicators {
+  position: relative;
+  bottom: -300px;
+}
