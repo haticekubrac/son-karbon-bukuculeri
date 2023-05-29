@@ -346,7 +346,7 @@ input[type="password"] {
 }
 
 /* Set a style for all buttons */
-button:not(.nav-link) {
+button:not(.login-btn, .accordion-button) {
   background-color: #04aa6d;
   color: white;
   padding: 10px 16px;
