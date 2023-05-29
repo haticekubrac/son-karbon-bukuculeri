@@ -239,7 +239,7 @@ span.psw {
 
 /* beslenme alışkanlıkları sayfası */
 .beslenme-section {
-  background: url(fotograflar/beslenme.png);
+  background: url(../../public/fotograflar/beslenme.png);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -248,7 +248,7 @@ span.psw {
 
 /* enerji tüketimi alışkanlıkları sayfası */
 .enerji-section {
-  background: url(fotograflar/Enerji\ Tüketimi.png);
+  background: url(../../public/fotograflar/Enerji\ Tüketimi.png);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +257,7 @@ span.psw {
 
 /* atık yönetimi alışkanlıkları sayfası */
 .atık-section {
-  background: url(fotograflar/Atık\ Yönetimi.png);
+  background: url(../../public/fotograflar/Atık\ Yönetimi.png);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -266,7 +266,7 @@ span.psw {
 
 /* ulaşım alışkanlıkları sayfası */
 .ulaşım-section {
-  background: url(fotograflar/Ulaşım\ Alışkanlıkları.png);
+  background: url(../../public/fotograflar/Ulaşım\ Alışkanlıkları.png);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
