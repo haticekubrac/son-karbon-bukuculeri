@@ -1,93 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /* homepage */
 .home-section {
-    background: url(fotograflar/deep-forest-green-watercolor-background_54887-112.png);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(fotograflar/deep-forest-green-watercolor-background_54887-112.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.image-overlay{
-    height: 100vh;
-    background: rgba(2, 21, 13, 0.281)
+.image-overlay {
+  height: 100vh;
+  background: rgba(2, 21, 13, 0.281);
 }
 
 a {
-    text-decoration: none;
-    color: white
+  text-decoration: none;
+  color: white;
 }
 
-
-
 .home-text {
-    background: linear-gradient(90deg, rgba(8, 255, 151, 1) 0%, rgba(0, 255, 148, 0.69) 35%, rgba(147, 204, 222, 1) 58%, rgba(0, 240, 255, 1) 99.99%, rgba(0, 255, 148, 0) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 255, 151, 1) 0%,
+    rgba(0, 255, 148, 0.69) 35%,
+    rgba(147, 204, 222, 1) 58%,
+    rgba(0, 240, 255, 1) 99.99%,
+    rgba(0, 255, 148, 0) 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /* Vavnar linklerin altındaki çizgi effectleri  */
 /* Siyah effect */
 .cool-link {
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-  }
-  
-  .cool-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: #000;
-    transition: width .3s;
-  }
-  
-  .cool-link:hover::after {
-    width: 100%;
-    transition: width .3s;
-  }
-
-  /* Beyaz Effect */
-.cool-link-white {
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-  }
-  
-  .cool-link-white::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: white;
-    transition: width .3s;
-  }
-  
-  .cool-link-white:hover::after {
-    width: 100%;
-    transition: width .3s;
-  }
-
-
-.navbar-scrolled {
-    background-color: white;
-    box-shadow: 0 3px 10px rgb(52, 51, 51, 0.15);
-    color: white
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
 }
 
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Beyaz Effect */
+.cool-link-white {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.cool-link-white::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.cool-link-white:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.navbar-scrolled {
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(52, 51, 51, 0.15);
+  color: white;
+}
 
 .navbar {
-    transition: background-color 0.5s, box-shadow 0.5s 
+  transition: background-color 0.5s, box-shadow 0.5s;
 }
 
 /* login navbar */
@@ -171,12 +174,7 @@ span.psw {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -241,11 +239,11 @@ span.psw {
 
 /* beslenme alışkanlıkları sayfası */
 .beslenme-section {
-    background: url(fotograflar/beslenme.png);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(fotograflar/beslenme.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* enerji tüketimi alışkanlıkları sayfası */
@@ -288,8 +286,9 @@ span.psw {
 */
 
 .carousel-control-next,
-.carousel-control-prev , .carousel-indicators  {
-    filter: invert(100%);
+.carousel-control-prev,
+.carousel-indicators {
+  filter: invert(100%);
 }
 
 .carousel {
@@ -327,4 +326,155 @@ input {
   margin-right: 12.5%;
   display: flex;
   justify-content: space-between;
+}
+
+/* Login css */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #962626;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button:not(.nav-link) {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 16px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.nav-link {
+  margin: 0;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
 }

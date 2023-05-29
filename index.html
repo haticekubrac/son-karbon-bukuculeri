@@ -67,77 +67,76 @@
               >
             </li>
             <li class="nav-item">
-                <!--login-->
-                  <button
-                    onclick="document.getElementById('id01').style.display='block'"
-                    class="btn-dark"
-                    style="width: auto; background: transparent;"
-                  >
-                    Giriş
-                  </button>
+              <!--login-->
+              <button
+                class="nav-link active text text-white cool-link-white"
+                onclick="document.getElementById('id01').style.display='block'"
+              >
+                Giriş
+              </button>
 
-                  <div id="id01" class="modal">
-                    <form
-                      class="modal-content animate w-50"
-                      action="/action_page.php"
-                      method="post"
+              <div id="id01" class="modal">
+                <form
+                  class="modal-content animate w-50"
+                  action="/action_page.php"
+                  method="post"
+                >
+                  <div class="imgcontainer">
+                    <span
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="close"
+                      title="Close Modal"
+                      >&times;</span
                     >
-                      <div class="imgcontainer">
-                        <span
-                          onclick="document.getElementById('id01').style.display='none'"
-                          class="close"
-                          title="Close Modal"
-                          >&times;</span
-                        >
-                      </div>
-
-                      <div class="container">
-                        <label for="name-surname"><b>İsim - Soyisim</b></label>
-                        <input
-                          type="text"
-                          placeholder="Örn: Hande Çilingir"
-                          name="name-surname"
-                          required
-                        />
-
-                        <label for="uname"><b>Mail</b></label>
-                        <input
-                          type="text"
-                          placeholder="Örn: hande@useinsider.com"
-                          name="uname"
-                          required
-                        />
-
-                        <label for="psw"><b>Şifre</b></label>
-                        <input
-                          type="password"
-                          placeholder="Lütfen güçlü bir şifre seçin"
-                          name="psw"
-                          required
-                        />
-
-                        <button type="submit">Giriş Yap!</button>
-                        
-                        <label>
-                          <input
-                            type="checkbox"
-                            checked="Beni Hatırla"
-                            name="remember"
-                          />Beni Hatırla
-                        </label>
-                      </div>
-
-                      <div class="container" style="background-color: #f1f1f1">
-                        <button
-                          type="button"
-                          onclick="document.getElementById('id01').style.display='none'"
-                          class="cancelbtn"
-                        >
-                          Kapat
-                        </button>
-                      </div>
-                    </form>
                   </div>
+
+                  <div class="container">
+                    <label for="name-surname"><b>İsim - Soyisim</b></label>
+                    <input
+                      type="text"
+                      placeholder="Örn: Hande Çilingir"
+                      name="name-surname"
+                      required
+                    />
+
+                    <label for="uname"><b>Mail</b></label>
+                    <input
+                      type="text"
+                      placeholder="Örn: hande@useinsider.com"
+                      name="uname"
+                      required
+                    />
+
+                    <label for="psw"><b>Şifre</b></label>
+                    <input
+                      type="password"
+                      placeholder="Lütfen güçlü bir şifre seçin"
+                      name="psw"
+                      required
+                    />
+
+                    <button type="submit">Giriş Yap!</button>
+
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked="Beni Hatırla"
+                        name="remember"
+                      />Beni Hatırla
+                    </label>
+                  </div>
+
+                  <div class="container" style="background-color: #f1f1f1">
+                    <button
+                      type="button"
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="cancelbtn"
+                    >
+                      Kapat
+                    </button>
+                  </div>
+                </form>
+              </div>
             </li>
           </ul>
         </div>
@@ -164,7 +163,9 @@
             <span class="highlighted">Ekolojik Ayak İzini Hesaplayarak</span>
           </h1>
           <h4 class="text-center home-text">Aksiyon Almaya Hazır Mısın?</h4>
-          <a class="btn btn-danger" href="beslenme-alışkanlıkları.html">Teste Başla!</a>
+          <a class="btn btn-danger" href="beslenme-alışkanlıkları.html"
+            >Teste Başla!</a
+          >
         </a>
       </div>
     </div>
@@ -433,21 +434,21 @@
                     </p>
                   </li>
                   <li>
-                    Su ayak izi 💦 
+                    Su ayak izi 💦
                     <p>
-                    Su ayak izi, kullandığımız ürün ve
-                    hizmetlerin her birini üretmek için kullanılan su miktarını
-                    ölçer. Bir işlem (pirinç yetiştirmek gibi), bir ürün (kot
-                    pantolon gibi), arabamıza koyduğumuz yakıt veya çok uluslu
-                    bir şirketin bütünü için ölçülebilir. Su ayak izinin üç
-                    bileşeni vardır; yeşil ayak izi, mavi ayak izi ve gri ayak
-                    izi. Bu bileşenler birlikte, tüketilen suyun kaynağını
-                    yağış/toprak nemi veya yüzey/yeraltı suyu olarak ve çevreyi
-                    kirleten maddelerin asimilasyonu için gerekli tatlı su
-                    hacmini tanımlayarak su kullanımının kapsamlı bir resmini
-                    sunar.
-                    </p> 
-                </li>
+                      Su ayak izi, kullandığımız ürün ve hizmetlerin her birini
+                      üretmek için kullanılan su miktarını ölçer. Bir işlem
+                      (pirinç yetiştirmek gibi), bir ürün (kot pantolon gibi),
+                      arabamıza koyduğumuz yakıt veya çok uluslu bir şirketin
+                      bütünü için ölçülebilir. Su ayak izinin üç bileşeni
+                      vardır; yeşil ayak izi, mavi ayak izi ve gri ayak izi. Bu
+                      bileşenler birlikte, tüketilen suyun kaynağını
+                      yağış/toprak nemi veya yüzey/yeraltı suyu olarak ve
+                      çevreyi kirleten maddelerin asimilasyonu için gerekli
+                      tatlı su hacmini tanımlayarak su kullanımının kapsamlı bir
+                      resmini sunar.
+                    </p>
+                  </li>
                 </ul>
               </div>
             </div>
