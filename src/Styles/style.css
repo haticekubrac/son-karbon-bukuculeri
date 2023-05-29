@@ -9,7 +9,7 @@ body {
 
 /* homepage */
 .home-section {
-  background: url(fotograflar/deep-forest-green-watercolor-background_54887-112.png);
+  background: url(../../public/fotograflar/deep-forest-green-watercolor-background_54887-112.png);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
