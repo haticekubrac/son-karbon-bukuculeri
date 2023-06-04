@@ -15,7 +15,7 @@
   </head>
   <body>
     <!--navbar-->
-    <nav class="navbar fixed-top navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-lg bg-white bg-opacity-50">
       <div class="container-fluid">
         <img
           style="position: relative z-index1; width: 70px; height: 70px"
@@ -23,7 +23,7 @@
           alt=""
         />
         &nbsp;&nbsp;&nbsp;
-        <a class="navbar-brand text-black" href="#"><b>CarbonWise</b></a>
+        <a class="navbar-brand text-black" href="../index.html"><b>CarbonWise</b></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -81,41 +81,54 @@
       </div>
 
       <div
-        id="carouselBeslenme"
+        id="carouselUlaşım"
         class="carousel slide w-50 h-50 mx-auto"
         style="padding: 40px"
       >
+      <!-- indicators -->
         <div class="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselBeslenme"
+            data-bs-target="#carouselUlaşım"
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
+
           <button
             type="button"
-            data-bs-target="#carouselBeslenme"
+            data-bs-target="#carouselUlaşım"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
+
           <button
             type="button"
-            data-bs-target="#carouselBeslenme"
+            data-bs-target="#carouselUlaşım"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselUlaşım"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+
+          <!-- inner -->
         </div>
         <div class="carousel-inner">
+
           <div class="carousel-item active" style="text-align: center">
-            <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4>
+            <h4>Özel aracınızla ne sıklıkla yolculuk ediyorsunuz?</h4>
             <br />
             <div class="container">
               <div class="slider">
                 <span>Hiç</span>
                 <input
-                  id="beslenme1"
+                  id="ulaşım1"
                   type="range"
                   value="0"
                   min="0"
@@ -127,64 +140,88 @@
               <div class="moji">😄</div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item" style="text-align: center">
-          <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4>
-          <br />
-          <div class="container">
-            <div class="slider">
-              <span>Hiç</span>
-              <input
-                id="beslenme2"
-                type="range"
-                value="0"
-                min="0"
-                max="10"
-                step="1"
-              />
-              <span>Sıklıkla</span>
+          <div class="carousel-item" style="text-align: center">
+            <h4>Toplu taşıma araçları ve sürdürülebilir araçlar (bisiklet, yürüyüş vb.) ile ne sıklıkla yolculuk ediyorsunuz?</h4>
+            <br />
+            <div class="container">
+              <div class="slider">
+                <span>Hiç</span>
+                <input
+                  id="ulaşım2"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="10"
+                  step="1"
+                />
+                <span>Sıklıkla</span>
+              </div>
+              <div class="moji">😄</div>
             </div>
-            <div class="moji">😄</div>
           </div>
-        </div>
-        <div class="carousel-item" style="text-align: center">
-          <h4>Ne sıklıkla hayvansal ürünler tüketirsiniz?</h4>
-          <br />
-          <div class="container">
-            <div class="slider">
-              <span>Hiç</span>
-              <input
-                id="beslenme3"
-                type="range"
-                value="0"
-                min="0"
-                max="10"
-                step="1"
-              />
-              <span>Sıklıkla</span>
+  
+          <div class="carousel-item" style="text-align: center">
+            <h4>Seyahatlerinizde ne sıklıkla uçak tercih ediyorsunuz?</h4>
+            <br />
+            <div class="container">
+              <div class="slider">
+                <span>Hiç</span>
+                <input
+                  id="ulaşım3"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="10"
+                  step="1"
+                />
+                <span>Sıklıkla</span>
+              </div>
+              <div class="moji">😄</div>
             </div>
-            <div class="moji">😄</div>
-            <a href="enerji-tüketimi-alışkanlıkları.html"
-              ><button type="button" class="btn btn-outline-info">
-                Devam etmek için tıkla!
-              </button></a
-            >
+          </div>
+  
+          <div class="carousel-item" style="text-align: center">
+            <h4>Genellikle kullandığınız ulaşım araçlarının yakıt türü çevre dostu mudur?</h4>
+            <br />
+            <div class="container">
+              <div class="slider">
+                <span>Hayır</span>
+                <input
+                  id="ulaşım4"
+                  type="range"
+                  value="0"
+                  min="0"
+                  max="10"
+                  step="1"
+                />
+                <span>Evet</span>
+              </div>
+              <div class="moji">😄</div>
+              <a href="enerji-tüketimi-alışkanlıkları.html"
+                ><button type="button" class="btn btn-outline-info">
+                  Devam etmek için tıklayın!
+                </button></a
+              >
+            </div>
           </div>
         </div>
 
+        
+        <!-- control buttons -->
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselBeslenme"
+          data-bs-target="#carouselUlaşım"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
+        
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselBeslenme"
+          data-bs-target="#carouselUlaşım"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -216,5 +253,6 @@
     ></script>
     <script src="../../JS/main.js"></script>
     <script src="../../JS/test.js"></script>
+    <script src="../../JS/ulaşım-calculate.js"></script>
   </body>
 </html>
