@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="navbar fixed-top navbar-expand-lg bg-white text-opacity-50">
+    <nav >
       <div className="container-fluid">
         <img
           style={{
