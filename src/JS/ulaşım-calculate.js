@@ -1,39 +1,43 @@
-function topla(a,b,c,d) {
-    return a+b+c+d;
-}
-
-function cikar(a,b) {
-    return a-b;
-}
-
-function carp(a,b) {
-    return a*b;
-}
-
-function bol(a,b) {
-    return a/b;
-}
-
 // ULAŞIM
 
-document.getElementById('ulaşım1').onchange = function(){
-    var ulaşım1 =  document.getElementById('ulaşım1').value;
-    console.log(ulaşım1);
-}
+function sum(a, b, c, d) {
+    return a + b + c + d;
+  }
 
-document.getElementById('ulaşım2').onchange = function(){
-    var ulaşım2 =  document.getElementById('ulaşım2').value;
-    console.log(ulaşım2);
-}
-
-document.getElementById('ulaşım3').onchange = function(){
-    var ulaşım3 =  document.getElementById('ulaşım3').value;
-    console.log(ulaşım3);
-}
-
-document.getElementById('ulaşım4').onchange = function(){
-    var ulaşım4 =  document.getElementById('ulaşım4').value;
-    console.log(ulaşım4);
-}
-
-topla(beslenme1,beslenme,2)
+function updateVariables() {
+    for (var i = 0; i < values.length; i++) {
+      values[i] = parseInt(localStorage.getItem('ulaşım' + (i + 1))) || 0;
+    }
+  
+    ulaşımSonuc = sum(values[0], values[1], values[2], values[3]);
+    console.log(ulaşımSonuc);
+  }
+  
+  var ulaşım1, ulaşım2, ulaşım3, ulaşım4, ulaşımSonuc;
+  var values = [ulaşım1, ulaşım2, ulaşım3, ulaşım4];
+  
+  document.getElementById('ulaşım1').onchange = function () {
+    localStorage.setItem('ulaşım1', document.getElementById('ulaşım1').value);
+    console.log(localStorage.getItem('ulaşım1'));
+    updateVariables();
+  };
+  
+  document.getElementById('ulaşım2').onchange = function () {
+    localStorage.setItem('ulaşım2', document.getElementById('ulaşım2').value);
+    console.log(localStorage.getItem('ulaşım2'));
+    updateVariables();
+  };
+  
+  document.getElementById('ulaşım3').onchange = function () {
+    localStorage.setItem('ulaşım3', document.getElementById('ulaşım3').value);
+    console.log(localStorage.getItem('ulaşım3'));
+    updateVariables();
+  };
+  
+  document.getElementById('ulaşım4').onchange = function () {
+    localStorage.setItem('ulaşım4', document.getElementById('ulaşım4').value);
+    console.log(localStorage.getItem('ulaşım4'));
+    updateVariables();
+  };
+  
+  updateVariables();
