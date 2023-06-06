@@ -10,10 +10,11 @@ function updateVariables() {
     }
   
     atıkSonuc = sum(values[0], values[1], values[2]);
-    console.log(atıkSonuc);
+    localStorage.setItem('atıkDeger', atıkSonuc);
+    console.log(localStorage.getItem('atıkDeger'));
   }
   
-  var atık1, atık2, atık3, atıkSonuc;
+  var atık1, atık2, atık3, atıkSonuc, atıkDeger;
   var values = [atık1, atık2, atık3];
   
   document.getElementById('atık1').onchange = function () {

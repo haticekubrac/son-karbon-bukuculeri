@@ -10,10 +10,11 @@ function updateVariables() {
     }
   
     enerjiSonuc = sum(values[0], values[1], values[2]);
-    console.log(enerjiSonuc);
+    localStorage.setItem('enerjiDeger', enerjiSonuc);
+    console.log(localStorage.getItem('enerjiDeger'));
   }
   
-  var enerji1, enerji2, enerji3, enerjiSonuc;
+  var enerji1, enerji2, enerji3, enerjiSonuc, enerjiDeger;
   var values = [enerji1, enerji2, enerji3];
   
   document.getElementById('enerji1').onchange = function () {

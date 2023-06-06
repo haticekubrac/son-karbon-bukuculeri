@@ -10,10 +10,11 @@ function updateVariables() {
     }
   
     ulaşımSonuc = sum(values[0], values[1], values[2], values[3]);
-    console.log(ulaşımSonuc);
+    localStorage.setItem('ulaşımDeger', ulaşımSonuc);
+    console.log(localStorage.getItem('ulaşımDeger'));
   }
   
-  var ulaşım1, ulaşım2, ulaşım3, ulaşım4, ulaşımSonuc;
+  var ulaşım1, ulaşım2, ulaşım3, ulaşım4, ulaşımSonuc, ulaşımDeger;
   var values = [ulaşım1, ulaşım2, ulaşım3, ulaşım4];
   
   document.getElementById('ulaşım1').onchange = function () {
