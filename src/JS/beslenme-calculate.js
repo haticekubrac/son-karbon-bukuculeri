@@ -42,3 +42,47 @@ document.getElementById('beslenme4').onchange = function () {
 };
 
 updateVariables();
+
+// 1. question
+
+var range = document.querySelector('.testSorusu');
+var div = document.querySelector('.moji');
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+range.addEventListener('input', (e) => {
+  let rangeValue = e.target.value;
+  div.textContent = mojis[rangeValue];
+});
+
+// 2. question
+
+var range = document.querySelector('.testSorusu');
+var div = document.querySelector('.moji');
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+range.addEventListener('input', (e) => {
+  let rangeValue = e.target.value;
+  div.textContent = mojis[rangeValue];
+});
+
+// 3. question
+
+var range = document.querySelector('.testSorusu');
+var div = document.querySelector('.moji');
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+range.addEventListener('input', (e) => {
+  let rangeValue = e.target.value;
+  div.textContent = mojis[rangeValue];
+});
+
+// 4. question
+
+var range = document.querySelector('.testSorusu');
+var div = document.querySelector('.moji');
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+range.addEventListener('input', (e) => {
+  let rangeValue = e.target.value;
+  div.textContent = mojis[rangeValue];
+});
