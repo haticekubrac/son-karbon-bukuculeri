@@ -75,15 +75,62 @@
 
 <!--Section-->
 <section class="">
+  <div style="height: 130px;"></div>
+  <div class="d-flex justify-content-center mx-auto" style="width: 85%;">
+    
+    <!--Kaç Dünya Gerekirdi-->
+    <div class="w-50">
+      <div><p class="text-align-center w-75 mt-4 mx-auto justify-content-center fs-5 text-center"><b>Eğer herkes senin gibi yaşasaydı kaç tane Dünya'ya ihtiyacımız olurdu?</b></p></div>
+      <p id="dunyaS" class="text-align-center w-75 mt-4 mx-auto justify-content-center fs-3 text-center"></p>
+      
+      <div class="text-align-center text-center">
 
-  <!--Kaç Dünyalık Enerji Harcıyorsun-->
-  <div>
-    <div><p>Kaç Dünyalık Enerji Harcıyorsun</p></div>
-    <div id="worlds"></div>
+        <div class="d-flex text-align-center text-center w-100 justify-content-center">
+          <div id="world1" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world2" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world3" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world1.0.5" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc yarim dunya.png" alt="earth"></div>
+        </div>
+
+        <div class="d-flex text-align-center text-center w-100 justify-content-center">
+          <div id="world4" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world5" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world6" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world2.0.5" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc yarim dunya.png" alt="earth"></div>
+        </div>
+
+        <div class="d-flex text-align-center text-center w-100 justify-content-center">
+          <div id="world7" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world8" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world9" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world3.0.5" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc yarim dunya.png" alt="earth"></div>
+        </div>
+        
+        <div class="d-flex text-align-center text-center w-100 justify-content-center">
+          <div id="world10" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world11" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world12" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc dunya.png" alt="earth"></div>
+          <div id="world4.0.5" style="display: none;"><img style="max-width: 100px;" src="../../../public/fotograflar/sonuc yarim dunya.png" alt="earth"></div>
+        </div>
+      
+      </div>
+      
+    </div>
+
+    <!--Pasta Grafiği-->
+    <div class="w-50">
+      <div  id="piechart"></div>
+      <p id="encokk" class="text-align-center text-center"></p>
+      <p id="encok" class="text-align-center text-center"></p>
+    </div>
   </div>
+  <br><br>
 
-  <!--Pasta Grafiği-->
-  <div id="piechart"></div>
+  <!--SERTİFİKA-->
+  <div>
+    <button id="sertifikaButon" type="button" class="btn btn-outline-success w-25 justify-content-center text-align-center mx-auto d-flex">Sertifikanızı görün!</button>
+    <div id="setifika" style="display: none;"><img src="../../../public/fotograflar/dis-fircasi.jpg" alt="certificate"></div>
+  </div>
 
   <!--Nasıl Hissediyorsun-->
   <div class="container w-75">
@@ -97,7 +144,7 @@
               data-bs-toggle="collapse"
               data-bs-target="#collapseFour"
             >
-              <b>Sonuçlar Hakkında Nasıl Hissediyorsun?</b>
+              <b>Sonuçlar Hakkında Nasıl Hissediyorsunuz?</b>
             </button>
           </h2>
           <div
@@ -136,8 +183,11 @@
     </div>
   </div>
 
+
+  
 </section>
 <!--Section-->
+
 <script src="../JS/main.js"></script>
 <script src="../JS/scroll.js"></script>
 <script
@@ -158,14 +208,14 @@
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
     ['Task', 'Hours per Day'],
-    ['Beslenme', parseInt(localStorage.getItem("beslenmeDeger"))],
-    ['Ulaşım', parseInt(localStorage.getItem("ulaşımDeger"))],
-    ['Atık', parseInt(localStorage.getItem("atıkDeger"))],
-    ['Enerji', parseInt(localStorage.getItem("enerjiDeger"))],
+    ['Beslenme', localStorage.getItem("toplamDeger") - parseInt(localStorage.getItem("beslenmeDeger"))],
+    ['Ulaşım', localStorage.getItem("toplamDeger") - parseInt(localStorage.getItem("ulaşımDeger"))],
+    ['Atık', localStorage.getItem("toplamDeger") - parseInt(localStorage.getItem("atıkDeger"))],
+    ['Enerji', localStorage.getItem("toplamDeger") - parseInt(localStorage.getItem("enerjiDeger"))],
   ]);
   
     // Optional; add a title and set the width and height of the chart
-    var options = {'title':'Karbon Ayak İzi Kategorileriniz', 'width':550, 'height':400};
+    var options = {'title':'Karbon Ayak İzi Kategorileriniz', 'width':650, 'height':400};
   
     // Display the chart inside the <div> element with id="piechart"
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
