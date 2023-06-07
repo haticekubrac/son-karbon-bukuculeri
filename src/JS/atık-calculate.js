@@ -36,3 +36,39 @@ function updateVariables() {
   };
   
   updateVariables();
+
+function updateTextInput(val) {
+  document.getElementById('textInput').value=val;
+}
+
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+// 1. question
+
+var range1 = document.querySelector('#atık1');
+var div1 = document.querySelector('#atmoji1');
+
+range1.addEventListener('input', (e) => {
+  let rangeValue1 = e.target.value;
+  div1.textContent = mojis[rangeValue1];
+});
+
+// 2. question
+
+var range2 = document.querySelector('#atık2');
+var div2 = document.querySelector('#atmoji2');
+
+range2.addEventListener('input', (e) => {
+  let rangeValue2 = e.target.value;
+  div2.textContent = mojis[rangeValue2];
+});
+
+// 3. question
+
+var range3 = document.querySelector('#atık3');
+var div3 = document.querySelector('#atmoji3');
+
+range3.addEventListener('input', (e) => {
+  let rangeValue3 = e.target.value;
+  div3.textContent = mojis[rangeValue3];
+});

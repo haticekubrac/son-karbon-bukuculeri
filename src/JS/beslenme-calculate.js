@@ -43,46 +43,48 @@ document.getElementById('beslenme4').onchange = function () {
 
 updateVariables();
 
-// 1. question
+function updateTextInput(val) {
+  document.getElementById('textInput').value=val;
+}
 
-var range = document.querySelector('.testSorusu');
-var div = document.querySelector('.moji');
 var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
 
-range.addEventListener('input', (e) => {
-  let rangeValue = e.target.value;
-  div.textContent = mojis[rangeValue];
+// 1. question
+
+var range1 = document.querySelector('#beslenme1');
+var div1 = document.querySelector('#besmoji1');
+
+range1.addEventListener('input', (e) => {
+  let rangeValue1 = e.target.value;
+  div1.textContent = mojis[rangeValue1];
 });
 
 // 2. question
 
-var range = document.querySelector('.testSorusu');
-var div = document.querySelector('.moji');
-var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+var range2 = document.querySelector('#beslenme2');
+var div2 = document.querySelector('#besmoji2');
 
-range.addEventListener('input', (e) => {
-  let rangeValue = e.target.value;
-  div.textContent = mojis[rangeValue];
+range2.addEventListener('input', (e) => {
+  let rangeValue2 = e.target.value;
+  div2.textContent = mojis[rangeValue2];
 });
 
 // 3. question
 
-var range = document.querySelector('.testSorusu');
-var div = document.querySelector('.moji');
-var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+var range3 = document.querySelector('#beslenme3');
+var div3 = document.querySelector('#besmoji3');
 
-range.addEventListener('input', (e) => {
-  let rangeValue = e.target.value;
-  div.textContent = mojis[rangeValue];
+range3.addEventListener('input', (e) => {
+  let rangeValue3 = e.target.value;
+  div3.textContent = mojis[rangeValue3];
 });
 
 // 4. question
 
-var range = document.querySelector('.testSorusu');
-var div = document.querySelector('.moji');
-var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+var range4 = document.querySelector('#beslenme4');
+var div4 = document.querySelector('#besmoji4');
 
-range.addEventListener('input', (e) => {
-  let rangeValue = e.target.value;
-  div.textContent = mojis[rangeValue];
+range4.addEventListener('input', (e) => {
+  let rangeValue4 = e.target.value;
+  div4.textContent = mojis[rangeValue4];
 });
