@@ -66,82 +66,11 @@
                 >Hakkımızda</a
               >
             </li>
-            <li class="nav-item">
-              <!--login-->
-              <button
-                class="nav-link active text text-white cool-link-white login-btn"
-                onclick="document.getElementById('id01').style.display='block'"
-              >
-                Giriş
-              </button>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
     <!--navbar-->
-
-    <!-- login modal  -->
-    <div id="id01" class="modal">
-      <form
-        class="modal-content animate w-50"
-        action="/action_page.php"
-        method="post"
-      >
-        <div class="imgcontainer">
-          <span
-            onclick="document.getElementById('id01').style.display='none'"
-            class="close"
-            title="Close Modal"
-            >&times;</span
-          >
-        </div>
-
-        <div class="container">
-          <label for="name-surname"><b>İsim - Soyisim</b></label>
-          <input
-            type="text"
-            placeholder="Örn: Hande Çilingir"
-            name="name-surname"
-            required
-          />
-
-          <label for="uname"><b>Mail</b></label>
-          <input
-            type="text"
-            placeholder="Örn: hande@useinsider.com"
-            name="uname"
-            required
-          />
-
-          <label for="psw"><b>Şifre</b></label>
-          <input
-            type="password"
-            placeholder="Lütfen güçlü bir şifre seçin"
-            name="psw"
-            required
-          />
-
-          <button type="submit" class="modal-btn">Giriş Yap!</button>
-
-          <label>
-            <input type="checkbox" checked="Beni Hatırla" name="remember" />Beni
-            Hatırla
-          </label>
-        </div>
-
-        <div class="container" style="background-color: #f1f1f1">
-          <button
-            type="button"
-            onclick="document.getElementById('id01').style.display='none'"
-            class="cancelbtn modal-btn"
-          >
-            Kapat
-          </button>
-        </div>
-      </form>
-    </div>
-    <!-- login modal  -->
 
     <!--content-->
     <div class="home-section">
