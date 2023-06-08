@@ -176,10 +176,33 @@ function shocked() {
 // SERTİFİKA
 
 var sertifikaButon = document.getElementById('sertifikaButon');
-var sertifika = document.getElementById('setifika');
+var sertifika = document.getElementById('sertifika');
+var isim = document.getElementById("isim");
+var tikButon = document.getElementById('tik');
+var sertifikaİsim;
+var öneriler = document.getElementById('öneriler');
+var öneriTik = document.getElementById('öneriTik');
 
 sertifikaButon.addEventListener('click', function() {
   sertifikaButon.classList.remove('d-flex');
+  isim.classList.add('d-flex');
   sertifikaButon.style.display = 'none';
-  sertifika.style.display = 'block';
+  isim.style.display = 'block';
+  tikButon.style.display = 'block';
 });
+
+tikButon.addEventListener('click', function() {
+  isim.classList.remove('d-flex');
+  isim.style.display = 'none';
+  sertifika.style.display = 'block';
+  sertifikaİsim = document.getElementById('isiminput').value;
+  document.getElementById('kullanıcıİsmi').innerHTML = sertifikaİsim;
+});
+
+
+öneriTik.addEventListener('click', function() {
+  öneriler.style.display = 'none';
+  alert("Yanıtınız için teşekkür ederiz!")
+});
+
+
