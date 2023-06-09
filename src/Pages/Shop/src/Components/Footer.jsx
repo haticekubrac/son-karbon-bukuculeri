@@ -142,6 +142,14 @@ const Footer = () => {
                 <li>
                   <NavLink
                     className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to="https://medium.com/search?q=Carbon+Footprint"
+                  >
+                    SSS
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
                     to=""
                   >
                     Hakkımızda
