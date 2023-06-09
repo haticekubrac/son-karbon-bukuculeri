@@ -10,7 +10,11 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./../Styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="./../Styles/style.css"
+    />
+    <link rel="stylesheet" href="./../Styles/hakkımızda.css">
     <title>Hakkımızda</title>
   </head>
   <body>
@@ -20,10 +24,12 @@
         <img
           style="position: relative z-index1; width: 70px; height: 70px"
           src="../../public/fotograflar/cartoon-earth-png-transparent-background-earth-clipart-11562852243wspgoxqalx_transparent.png"
-          alt=""
+          alt="logo"
         />
         &nbsp;&nbsp;&nbsp;
-        <a class="navbar-brand text-white" href="index.html"><b>CarbonWise</b></a>
+        <a class="navbar-brand text-white" href="index.html"
+          ><b>CarbonWise</b></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -66,101 +72,6 @@
                 >Hakkımızda</a
               >
             </li>
-            <li class="nav-item">
-              <!DOCTYPE html>
-              <html>
-                <head>
-                  <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                  />
-                </head>
-                <body>
-                  <button
-                    class="nav-link active text text-white cool-link-white"
-                    onclick="document.getElementById('id01').style.display='block'"
-                    style="width: auto"
-                  >
-                    Giriş
-                  </button>
-
-                  <div id="id01" class="modal">
-                    <form
-                      class="modal-content animate"
-                      action="/action_page.php"
-                      method="post"
-                    >
-                      <div class="imgcontainer">
-                        <span
-                          onclick="document.getElementById('id01').style.display='none'"
-                          class="close"
-                          title="Close Modal"
-                          >&times;</span
-                        >
-                      </div>
-
-                      <div class="container">
-                        <label for="name-surname"><b>İsim-Soyisim</b></label>
-                        <input
-                          type="text"
-                          placeholder="İsim-Soyisim"
-                          name="name-surname"
-                          required
-                        />
-
-                        <label for="uname"><b>Mail</b></label>
-                        <input
-                          type="text"
-                          placeholder="Mail"
-                          name="uname"
-                          required
-                        />
-
-                        <label for="psw"><b>Şifre</b></label>
-                        <input
-                          type="password"
-                          placeholder="Şifre"
-                          name="psw"
-                          required
-                        />
-
-                        <button type="submit">Giriş</button>
-                        <label>
-                          <input
-                            type="checkbox"
-                            checked="Beni hatırla"
-                            name="remember"
-                          />
-                          Beni hatırla
-                        </label>
-                      </div>
-
-                      <div class="container" style="background-color: #f1f1f1">
-                        <button
-                          type="button"
-                          onclick="document.getElementById('id01').style.display='none'"
-                          class="cancelbtn"
-                        >
-                          kapat
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-
-                  <script>
-                    // Get the modal
-                    var modal = document.getElementById("id01");
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function (event) {
-                      if (event.target == modal) {
-                        modal.style.display = "none";
-                      }
-                    };
-                  </script>
-                </body>
-              </html>
-            </li>
           </ul>
         </div>
       </div>
@@ -168,16 +79,88 @@
     <!--navbar-->
 
     <!--Section-->
-    <section class="home-section">
+    <div class="about-section">
+      <h1>About Us Page</h1>
+      <p>Some text about who we are and what we do.</p>
+      <p>Resize the browser window to see that this page is responsive by the way.</p>
+    </div>
+    
+    <div class="row mt-5 mb-5">
+      
+      <div class="column">
+        <div  class="card w-75">
+          <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>Zeynep Sena Pehlivan</h2>
+            <p class="title">CEO & Founder</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>zeynep34sen@gmail.com</p>
+            <p><button class="button">LinkedIn Hesabına Git</button></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card w-75">
+          <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>Hatice Kübra Çiçek</h2>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>hatice@teinn.org</p>
+            <p><button class="button">LinkedIn Hesabına Git</button></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column mt-5">
+        <div class="card w-75">
+          <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+          <div class="container">
+            <h2>Emre Açar</h2>
+            <p class="title">Designer</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>ea517645@gmail.com</p>
+            <p><button class="button">LinkedIn Hesabına Git</button></p>
+          </div>
+        </div>
+      </div>
 
-    </section>
+      <div class="column mt-5">
+        <div class="card w-75">
+          <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>Rümeysa Aksu</h2>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p>rdeneyap@gmail.com</p>
+            <p><button class="button">LinkedIn Hesabına Git</button></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <!--Section-->
-    <script src="../JS/main.js"></script>
-    <script src="../JS/scroll.js"></script>
+
+    <script src="./../JS/main.js"></script>
+    <script src="./../JS/scroll.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!--footer-->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-dark" target="_blank" href="index.html"
+          >carbonwise.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    
   </body>
 </html>

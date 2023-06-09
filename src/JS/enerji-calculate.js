@@ -10,10 +10,11 @@ function updateVariables() {
     }
   
     enerjiSonuc = sum(values[0], values[1], values[2]);
-    console.log(enerjiSonuc);
+    localStorage.setItem('enerjiDeger', enerjiSonuc);
+    console.log(localStorage.getItem('enerjiDeger'));
   }
   
-  var enerji1, enerji2, enerji3, enerjiSonuc;
+  var enerji1, enerji2, enerji3, enerjiSonuc, enerjiDeger;
   var values = [enerji1, enerji2, enerji3];
   
   document.getElementById('enerji1').onchange = function () {
@@ -35,3 +36,39 @@ function updateVariables() {
   };
   
   updateVariables();
+
+function updateTextInput(val) {
+  document.getElementById('textInput').value=val;
+}
+
+var mojis = ['🤯','😩','🙁','😑','😐','🙂','😃','😄','😁','😎','🤩'];
+
+// 1. question
+
+var range1 = document.querySelector('#enerji1');
+var div1 = document.querySelector('#enmoji1');
+
+range1.addEventListener('input', (e) => {
+  let rangeValue1 = e.target.value;
+  div1.textContent = mojis[rangeValue1];
+});
+
+// 2. question
+
+var range2 = document.querySelector('#enerji2');
+var div2 = document.querySelector('#enmoji2');
+
+range2.addEventListener('input', (e) => {
+  let rangeValue2 = e.target.value;
+  div2.textContent = mojis[rangeValue2];
+});
+
+// 3. question
+
+var range3 = document.querySelector('#enerji3');
+var div3 = document.querySelector('#enmoji3');
+
+range3.addEventListener('input', (e) => {
+  let rangeValue3 = e.target.value;
+  div3.textContent = mojis[rangeValue3];
+});
