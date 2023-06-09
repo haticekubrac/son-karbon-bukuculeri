@@ -11,9 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router": "^6.11.2"
+    "react-router": "^6.11.2",
+    "remixicon": "^3.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
