@@ -20,7 +20,7 @@ const Shoes = () => {
   
   useEffect(() => {
     search = searchParams.get("search")  
-    setFilteredShoes(search ? shoes.filter((shoe) => shoe.title.includes(search)): shoes)
+    setFilteredShoes(search ? shoes.filter((shoe) => shoe.title.toLocaleUpperCase().includes(search.toLocaleUpperCase() )): shoes)
   }, [searchParams.get("search")]);
 
   return (
