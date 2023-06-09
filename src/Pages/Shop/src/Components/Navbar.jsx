@@ -84,21 +84,30 @@ const Navbar = ({
                 }  flex-col lg:hidden z-10 absolute bg-white px-4 pr-10 rounded-2xl py-5 w-[150px]`}
               >
                 <NavLink
-                  onClick={() => setHamburgerState(false)}
+                  onClick={() => {
+                    setHamburgerState(false);
+                    setAccountOpen(false)
+                  }}
                   to="/categories/cloth-bags"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold w-fit h-fit"
                 >
                   Bez Çantalar
                 </NavLink>
                 <NavLink
-                  onClick={() => setHamburgerState(false)}
+                  onClick={() => {
+                    setHamburgerState(false);
+                    setAccountOpen(false)
+                  }}
                   to="/categories/shoes"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold"
                 >
                   Ayakkabılar
                 </NavLink>
                 <NavLink
-                  onClick={() => setHamburgerState(false)}
+                  onClick={() => {
+                    setHamburgerState(false);
+                    setAccountOpen(false)
+                  }}
                   to="/categories/bottles"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold"
                 >
@@ -108,6 +117,10 @@ const Navbar = ({
             </div>
             <NavLink
               to="/"
+              onClick={() => {
+                setHamburgerState(false);
+                setAccountOpen(false)
+              }}
               className="flex flex-col justify-center items-center md:justify-normal  md:flex-row md:items-center md:gap-5"
             >
               <img
@@ -206,11 +219,13 @@ const Navbar = ({
                   <div className="flex flex-row justify-between">
                     <h4 className="font-semibold text-[16px]">Toplam</h4>
                     <h4 className="font-semibold text-[16px]">
-                      {`${totalValues.reduce(
-                        (accumulator, currentValue) =>
-                          accumulator + Number(currentValue),
-                        0
-                      ).toFixed(2)}`.replace(/[.]/g, ",")}{" "}
+                      {`${totalValues
+                        .reduce(
+                          (accumulator, currentValue) =>
+                            accumulator + Number(currentValue),
+                          0
+                        )
+                        .toFixed(2)}`.replace(/[.]/g, ",")}{" "}
                       TL
                     </h4>
                   </div>
