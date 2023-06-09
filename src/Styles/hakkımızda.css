@@ -7,6 +7,10 @@ html {
 box-sizing: border-box;
 }
 
+a {
+    color: black;
+}
+
 *, *:before, *:after {
 box-sizing: inherit;
 }
@@ -27,6 +31,8 @@ margin: auto;
 padding: 50px;
 text-align: center;
 background-image: url(../../public/fotograflar/about-us.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
 color: white;
 }
 

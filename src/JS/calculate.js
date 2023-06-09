@@ -16,87 +16,12 @@ localStorage.setItem("toplamDeger", toplamSonuc);
 var dunyaSayisi;
 
 if (toplamSonuc === 0) {
-  dunyaSayisi = 1;
-  yarımDunya = 1;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world1.0.5").style.display = 'block';
+  
 }
 
 else if (0 < toplamSonuc && toplamSonuc <= 20) {
-  dunyaSayisi = 3;
-  yarımDunya = 0;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-}
-
-else if (20 < toplamSonuc && toplamSonuc <= 40) {
-  dunyaSayisi = 4;
-  yarimDunya = 1;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-  document.getElementById("world4").style.display = 'block';
-  document.getElementById("world2.0.5").style.display = 'block';
-}
-
-else if (40 < toplamSonuc && toplamSonuc <= 60) {
-  dunyaSayisi = 6;
-  yarımDunya = 0;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-  document.getElementById("world4").style.display = 'block';
-  document.getElementById("world5").style.display = 'block';
-  document.getElementById("world6").style.display = 'block';
-}
-
-else if (60 < toplamSonuc && toplamSonuc <= 80) {
-  dunyaSayisi = 7;
-  yarimDunya = 1;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-  document.getElementById("world4").style.display = 'block';
-  document.getElementById("world5").style.display = 'block';
-  document.getElementById("world6").style.display = 'block';
-  document.getElementById("world7").style.display = 'block';
-  document.getElementById("world3.0.5").style.display = 'block';
-}
-
-else if (80 < toplamSonuc && toplamSonuc <= 100) {
-  dunyaSayisi = 9;
-  yarımDunya = 0;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-  document.getElementById("world4").style.display = 'block';
-  document.getElementById("world5").style.display = 'block';
-  document.getElementById("world6").style.display = 'block';
-  document.getElementById("world7").style.display = 'block';
-  document.getElementById("world8").style.display = 'block';
-  document.getElementById("world9").style.display = 'block';
-}
-
-else if (100 < toplamSonuc && toplamSonuc <= 120) {
-  dunyaSayisi = 10;
-  yarimDunya = 1;
-  document.getElementById("world1").style.display = 'block';
-  document.getElementById("world2").style.display = 'block';
-  document.getElementById("world3").style.display = 'block';
-  document.getElementById("world4").style.display = 'block';
-  document.getElementById("world5").style.display = 'block';
-  document.getElementById("world6").style.display = 'block';
-  document.getElementById("world7").style.display = 'block';
-  document.getElementById("world8").style.display = 'block';
-  document.getElementById("world9").style.display = 'block';
-  document.getElementById("world10").style.display = 'block';
-  document.getElementById("world4.0.5").style.display = 'block';
-}
-
-else if (120 < toplamSonuc && toplamSonuc <= 140) {
   dunyaSayisi = 12;
-  yarımDunya = 0;
+  yarimDunya = 0;
   document.getElementById("world1").style.display = 'block';
   document.getElementById("world2").style.display = 'block';
   document.getElementById("world3").style.display = 'block';
@@ -111,8 +36,79 @@ else if (120 < toplamSonuc && toplamSonuc <= 140) {
   document.getElementById("world12").style.display = 'block';
 }
 
+else if (20 < toplamSonuc && toplamSonuc <= 40) {
+  dunyaSayisi = 10;
+  yarimDunya = 5;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world2").style.display = 'block';
+  document.getElementById("world3").style.display = 'block';
+  document.getElementById("world4").style.display = 'block';
+  document.getElementById("world5").style.display = 'block';
+  document.getElementById("world6").style.display = 'block';
+  document.getElementById("world7").style.display = 'block';
+  document.getElementById("world8").style.display = 'block';
+  document.getElementById("world9").style.display = 'block';
+  document.getElementById("world10").style.display = 'block';
+  document.getElementById("world4.0.5").style.display = 'block';
+}
+
+else if (40 < toplamSonuc && toplamSonuc <= 60) {
+  dunyaSayisi = 9;
+  yarimDunya = 0;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world2").style.display = 'block';
+  document.getElementById("world3").style.display = 'block';
+  document.getElementById("world4").style.display = 'block';
+  document.getElementById("world5").style.display = 'block';
+  document.getElementById("world6").style.display = 'block';
+  document.getElementById("world7").style.display = 'block';
+  document.getElementById("world8").style.display = 'block';
+  document.getElementById("world9").style.display = 'block';
+}
+
+else if (60 < toplamSonuc && toplamSonuc <= 80) {
+  dunyaSayisi = 7;
+  yarimDunya = 5;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world2").style.display = 'block';
+  document.getElementById("world3").style.display = 'block';
+  document.getElementById("world4").style.display = 'block';
+  document.getElementById("world5").style.display = 'block';
+  document.getElementById("world6").style.display = 'block';
+  document.getElementById("world7").style.display = 'block';
+  document.getElementById("world3.0.5").style.display = 'block';
+}
+
+else if (80 < toplamSonuc && toplamSonuc <= 100) {
+  dunyaSayisi = 6;
+  yarimDunya = 0;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world2").style.display = 'block';
+  document.getElementById("world3").style.display = 'block';
+  document.getElementById("world4").style.display = 'block';
+  document.getElementById("world5").style.display = 'block';
+  document.getElementById("world6").style.display = 'block';
+}
+
+else if (100 < toplamSonuc && toplamSonuc <= 120) {
+  dunyaSayisi = 4;
+  yarimDunya = 5;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world2").style.display = 'block';
+  document.getElementById("world3").style.display = 'block';
+  document.getElementById("world4").style.display = 'block';
+  document.getElementById("world2.0.5").style.display = 'block';
+}
+
+else if (120 < toplamSonuc && toplamSonuc <= 140) {
+  dunyaSayisi = 1;
+  yarimDunya = 5;
+  document.getElementById("world1").style.display = 'block';
+  document.getElementById("world1.0.5").style.display = 'block';
+}
+
 // MAX DEGER
-document.getElementById("dunyaS").innerHTML = dunyaSayisi + " Dünya";
+document.getElementById("dunyaS").innerHTML = dunyaSayisi + "," + yarimDunya + " Dünya";
 
 var maxValue = Math.min(
   parseInt(localStorage.getItem("beslenmeDeger")),
