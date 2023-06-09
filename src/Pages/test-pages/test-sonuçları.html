@@ -136,40 +136,113 @@
     </div>
     <div style="display: none;" id="sertifika">
       <img class="w-75" src="../../../public/fotograflar/SERTİFİKA.png" alt="certificate">
-      <div  style="position: absolute; top: 135%; left: 50%; transform: translate(-50%, -50%);">
+      <div  style="position: absolute; height: 125%; left: 50%; transform: translate(-50%, -50%);">
         <p id="kullanıcıİsmi" class="fs-1" style="color: brown;"></p></div>
-    </div><br><br>
+    </div>
+  </div><br><br>
 
   <!--Öneriler-->
-  <div class="w-75 mx-auto">
-    <h4>Sürdürülebilir bir çevre için farkındalığını oluşturarak ilk adımını atmış oldun! Şimdi de gündelik alışkanlıklarının birkaçını değiştirebilirsin.</h3>
-    <ul >
+  <div class="w-75 h-75 mx-auto text-center">
+    <h4>Sürdürülebilir bir çevre için farkındalık oluşturarak ilk adımınızı atmış oldunuz!</h3>
+    <h6>Şimdi de daha sürdürülebilir bir çevre için gündelik alışkanlıklarınızda nasıl değişiklikler yapabileceğinize göz atalım: </h6><br>
+      
+      <div
+      id="carouselSonuc"
+      class="carousel slide mx-auto"
+      style="width: 85%; height: 100%;"
+    >
+    <!-- indicators -->
+    <div class="carousel-indicators" style="position: relative; bottom: -380px;">
+      <button
+        type="button"
+        data-bs-target="#carouselSonuc"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
 
-      <li>
-        <p></p>
-      </li>
-      
-      <li>
-        <p>Toplu taşıma alışkanlıklarını gözden geçirip, kısa mesafeler için yürümeyi ya da bisiklet sürmeyi tercih edebilirsin.</p>
-        <p>Toplu taşıma alışkanlıklarını gözden geçirip, kısa mesafeler için yürümeyi ya da bisiklet sürmeyi tercih edebilirsin.</p>
-      </li>
-      
-      <li>
-        <p>Tüketim alışkanlıklarını gözden geçirip, daha az çöp üretebilirsin.</p>
-      </li>
-      
-      <li>
-        <p>Kişisel araç kullanımı alışkanlıklarını gözden geçirip, kısa mesafeler için yaya ya da bisiklet sürmeyi tercih edebilirsin.</p>
-      </li>
-      
-      <li>
-        
-      </li>
-      
-    </ul>
+      <button
+        type="button"
+        data-bs-target="#carouselSonuc"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+
+      <button
+        type="button"
+        data-bs-target="#carouselSonuc"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+
+      <button
+        type="button"
+        data-bs-target="#carouselSonuc"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></button>
+
+        <!-- inner -->
+      </div>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" style="text-align: center">
+          <h4>🥑 Beslenme Alışkanlıkları 🥑</h4>
+          <br />
+          <div class="container">
+            <ul>
+              <li><p>Alacağınız besinleri seçerken işlenmemiş, paketlenmemiş veya yerel olarak yetiştirilmiş gıdaları tercih edebilirsiniz. </p></li>
+              <li><p>Yerel ve mevsimine uygun ürünleri tercih ederek çevreye verilen zararın azalmasını sağlayabilirsiniz.</p></li>
+              <li><p>Yemek atıklarınızı azaltabilir ve geri dönüştürmeyi deneyebilirsiniz.</p></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="text-align: center">
+          <h4>✈️ Ulaşım Alışkanlıkları ✈️</h4>
+          <br />
+          <div class="container">
+            <ul>
+              <li><p>Kişisel araç kullanımı alışkanlıklarınızı gözden geçirip, kısa mesafeler için toplu taşıma araçları, yürüme ya da bisiklet sürmeyi tercih edebilirsiniz.</p></li>
+              <li><p>Uçak seyahatlerinizi, doğaya verdiği zarar kıyasla daha az olan tren vb. seyahat yöntemleri ile değiştirebilirsiniz.</p></li>
+              <li><p>Kullandığınız araçların yakıt türünün daha çevre dostu ve yenilenebilir enerji kaynaklarından üretilmiş olmasına dikkat edebilirsiniz.</p></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="text-align: center">
+          <h4>🔋 Enerji Tüketimi Alışkanlıkları 🔋</h4>
+          <br />
+          <div class="container">
+            <ul>
+              <li><p>Yenilenebilir enerji kaynaklarını kullanarak Dünya'daki kaynakların tükenme hızının yavaşlamasını sağlayabilirsiniz.</p></li>
+              <li><p>Evinizde kullandığınız cihazların (aydınlatma, dekorasyon, beyaz eşya vb.) enerji tasarruflu olmasına dikkat edebilirsiniz.</p></li>
+              <li><p>Evinizde ısıtma ve soğutma sistemlerini (yalıtım vb. yöntemler ile) verimli bir şekilde kullanmaya özen gösterebilirsiniz.</p></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="carousel-item" style="text-align: center">
+          <h4>♻️ Atık Yönetimi Alışkanlıkları ♻️</h4>
+          <br />
+          <div class="container">
+            <ul>
+              <li><p>Kağıt, plastik, cam gibi atıkları ileri veya geri dönüşüm yöntemleri ile yeniden kullanıma kazandırabilirsiniz.</p></li>
+              <li><p>Sıfır atık prensiplerine dikkat ederek atık yönetimi konusunda özenli davranabilirsiniz.</p></li>
+              <li><p>Tek kullanımlık ürünler yerine yeniden kullanılabilir ürünleri tercih ederek atıklarınızı minimuma indirebilirsiniz.</p></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
     
     <div class="text-center">
-      <input id="öneriler" style=" width: 75%;" type="text" placeholder="Peki siz daha sürdürülebilir bir Dünya için başka neler yapıyorsunuz?" required>
+      <input id="öneriler" class="text-center" style=" width: 60%;" type="text" placeholder="Peki siz daha sürdürülebilir bir Dünya için başka neler yapıyorsunuz?" required>
       <img style="width: 5%; margin: auto;" src="../../../public/fotograflar/tik.png" alt="accept" id="öneriTik">
     </div>
     
@@ -230,6 +303,18 @@
   
 </section>
 <!--Section-->
+
+<!--footer-->
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2023 Copyright:
+    <a class="text-dark" target="_blank" href="index.html"
+      >carbonwise.com</a
+    >
+  </div>
+  <!-- Copyright -->
+</footer>
 
 <script src="../JS/main.js"></script>
 <script src="../JS/scroll.js"></script>
