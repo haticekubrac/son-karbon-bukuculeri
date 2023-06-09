@@ -33,7 +33,8 @@ text-align: center;
 background-image: url(../../public/fotograflar/about-us.jpeg);
 background-repeat: no-repeat;
 background-size: cover;
-color: white;
+
+color: rgb(255, 255, 255);
 }
 
 .container {
