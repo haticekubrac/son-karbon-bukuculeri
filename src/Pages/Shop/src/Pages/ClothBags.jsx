@@ -20,7 +20,7 @@ const ClothBags = () => {
   
   useEffect(() => {
     search = searchParams.get("search")  
-    setFilteredClothBags(search ? clothBags.filter((clothBag) => clothBag.title.includes(search)): clothBags)
+    setFilteredClothBags(search ? clothBags.filter((clothBag) => clothBag.title.toLocaleUpperCase().includes(search.toLocaleUpperCase())): clothBags)
   }, [searchParams.get("search")]);
 
   return (

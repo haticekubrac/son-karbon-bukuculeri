@@ -75,6 +75,13 @@ const basketProductsReducer = (state, action) => {
         JSON.stringify(state.filter((p) => p.path !== action.path))
       );
       return state.filter((p) => p.path !== action.path);
+
+    case "clear":
+      localStorage.setItem(
+        "basketProducts",
+        JSON.stringify([])
+      );
+      return []
   }
 };
 
@@ -85,8 +92,8 @@ function Layout() {
   );
   const loggedIn = localStorage.getItem("loggedIn") || false;
   const [searchParams, setSearchParams] = useSearchParams();
-  const isLoggedIn = localStorage.getItem("isLoggedIn") || false
-  localStorage.setItem("isLoggedIn", isLoggedIn)
+  let isLoggedIn = localStorage.getItem("isLoggedIn") || false
+  
   return (
     <div className="">
       <Navbar

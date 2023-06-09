@@ -5,6 +5,11 @@ import HorizontalScroll from "../Components/HorizontalScroll";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
 
+async function HomePageLoader() {
+  const firstScrollData = await fetch("../../web-scraper/scrapedDataFirstHorScroll.json")
+}
+
+
 
 const HomePage = () => {
   return (
@@ -27,18 +32,20 @@ const HomePage = () => {
             </h2>
             {/* Paragraph */}
             <div className="flex flex-col m-auto">
-              <p className="w-3/4 text-white font-semibold sm:text-[16px] text-[12px]">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti eligendi magnam neque, quos qui at voluptates alias
-                ipsum incidunt, reiciendis esse reprehenderit voluptatibus?
-                Officiis doloremque et earum, architecto vero vitae.
+              <p className="w-3/4 text-white font-semibold text-[14px] md:text-[16px] ">
+                Karbon Sıfır Ürünleri ile adını duyuran SuCo,
+                yenilikçi yaklaşımıyla doğal kaynakları korumayı ve karbon ayak
+                izini azaltmayı hedeflemektedir. SuCo'nun bu ürünleri,
+                sürdürülebilir malzemelerden üretilmiş olup, geri
+                dönüştürülebilir ve doğaya zarar vermeden çözünebilir
+                özelliklere sahiptir.
               </p>
             </div>
             {/* Link To Section */}
             <div className="flex items-end flex-col m-auto w-full hover:underline hover:decoration-4 transition-color  hover:decoration-gray-50">
               <div className="text-white flex flex-row items-end">
                 <h2 className="text-[24px] font-bold flex h-auto">
-                <NavLink to="/categories/bottles">Sayfaya Git</NavLink>
+                  <NavLink to="/categories/bottles">Sayfaya Git</NavLink>
                 </h2>
                 <div className="flex items-center">
                   <CaretRight size={32} weight="bold" />
@@ -63,17 +70,19 @@ const HomePage = () => {
               </h2>
               {/* Paragraph */}
               <div className="flex flex-col m-auto">
-                <p className="w-3/4 text-white font-semibold sm:text-[14px] text-[12px]">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Corrupti eligendi magnam neque, quos qui at voluptates alias
-                  ipsum incidunt, reiciendis esse reprehenderit voluptatibus?
+                <p className="w-3/4 text-white font-semibold text-[14px] sm:text-[16px] lg:text-[14px]">
+                  CWS'nin bez çantaları, doğal kaynakları korumayı ve karbon
+                  emisyonunu azaltmayı amaçlayan yenilikçi bir yaklaşımla
+                  tasarlanmıştır. Üretim sürecinden başlayarak tüketiciye
+                  ulaşana kadar her adımda karbon ayak izini en aza indirmek
+                  için çalışılmıştır.
                 </p>
               </div>
               {/* Link To Section */}
               <div className="flex items-end flex-col m-auto w-full hover:underline hover:decoration-4 transition-color  hover:decoration-gray-50">
                 <div className="text-white flex flex-row items-end">
                   <h2 className="text-[24px] font-bold flex h-auto">
-                  <NavLink to="/categories/cloth-bags">Sayfaya Git</NavLink>
+                    <NavLink to="/categories/cloth-bags">Sayfaya Git</NavLink>
                   </h2>
                   <div className="flex items-center">
                     <CaretRight size={32} weight="bold" />
@@ -95,10 +104,12 @@ const HomePage = () => {
               </h2>
               {/* Paragraph */}
               <div className="flex flex-col m-auto">
-                <p className="w-2/3 text-white font-semibold sm:text-[14px] text-[12px]">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Corrupti eligendi magnam neque, quos qui at voluptates alias
-                  ipsum incidunt, reiciendis esse reprehenderit voluptatibus?
+                <p className="w-2/3 text-white font-semibold text-[14px] sm:text-[16px] lg:text-[14px]">
+                  CWS Ayakkabıları, üretim sürecinden itibaren karbon emisyonunu
+                  en aza indirmek için özenle tasarlanmıştır. Sürdürülebilir
+                  malzemeler kullanılarak üretilen ayakkabılar, geri
+                  dönüştürülebilme özelliğine
+                  sahiptir.
                 </p>
               </div>
               {/* Link To Section */}
@@ -117,8 +128,18 @@ const HomePage = () => {
         </div>
       </div>
       <div className="flex flex-col gap-36 py-20">
-        <HorizontalScroll header={"Müşterilerin Tercihi"} paragraph={"Müşterilerimiz tarafından en çok tercih edilen aşağıda sıralanmıştır. Alttaki ürünler, aradıklarınızı daha hızlı bulmanızı sağlayabilir."} />
-        <HorizontalScroll header={"Tasarımcılarımızın Önerdikleri"} paragraph={"Aşağıda gördükleriniz tasarımcılarımız tarafından en çok beğenilen ürünlerden oluşmaktadır. Tasarımcılarımızın bu ürünleri seçerken kalite, ömrü, renk kalitesi ve daha pek çok özelliği dikkate almıştır."} />
+        <HorizontalScroll
+          header={"Müşterilerin Tercihi"}
+          paragraph={
+            "Müşterilerimiz tarafından en çok tercih edilen aşağıda sıralanmıştır. Alttaki ürünler, aradıklarınızı daha hızlı bulmanızı sağlayabilir."
+          }
+        />
+        <HorizontalScroll
+          header={"Tasarımcılarımızın Önerdikleri"}
+          paragraph={
+            "Aşağıda gördükleriniz tasarımcılarımız tarafından en çok beğenilen ürünlerden oluşmaktadır. Tasarımcılarımızın bu ürünleri seçerken kalite, ömrü, renk kalitesi ve daha pek çok özelliği dikkate almıştır."
+          }
+        />
       </div>
     </main>
   );

@@ -19,12 +19,16 @@ const Footer = () => {
           {/* Writing Part */}
           <div className="flex flex-col gap-2 ">
             <h4 className="font-semibold text-[15px] md:text-[17px]">
-              Dünyamızı Yeniden Hayata Dödürelim
+              Daha Sürdürülebilir Dünya İçin...
             </h4>
             <p className="text-[15px] md:text-[17px] text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia,
-              repellat quae, vero nobis magnam blanditiis at voluptatibus quos
-              totam est corrupti eius magni beatae accusantium.
+              Daha Sürdürülebilir Dünya İçin sloganına uygun olarak, çevre
+              koruması, yenilikçilik ve farkındalık oluşturma ilkeleriyle
+              hareket ediyoruz. Doğa dostu malzemeler kullanarak, enerji ve su
+              tasarrufuna odaklanarak ve geri dönüşümü teşvik ederek
+              sürdürülebilir ürünler sunuyoruz. Hedefimiz, insanları çevreye
+              duyarlı alışkanlıklar edinmeye teşvik ederek küresel ölçekte bir
+              etki yaratmak ve daha sürdürülebilir bir gelecek inşa etmektir.
             </p>
           </div>
         </div>
@@ -43,40 +47,60 @@ const Footer = () => {
               }
               className="flex flex-row justify-between items-center w-full"
             >
-              <h3 className="text-[14px] md:text-[17px] font-semibold">Navigasyon</h3>
+              <h3 className="text-[14px] md:text-[17px] font-semibold">
+                Navigasyon
+              </h3>
               <Plus
-                className={`${openedList.navigation ? "opacity-0 hidden" : ""} md:hidden navbar-plus`}
+                className={`${
+                  openedList.navigation ? "opacity-0 hidden" : ""
+                } md:hidden navbar-plus`}
                 size={14}
                 weight="bold"
               />
               <Minus
-                className={`${openedList.navigation ? "" : "opacity-0 hidden"} md:hidden`}
+                className={`${
+                  openedList.navigation ? "" : "opacity-0 hidden"
+                } md:hidden`}
                 size={14}
                 weight="bold"
               />
             </div>
             {/* Links */}
             <div
-              className={`${openedList.navigation ? "" : "hidden"} md:block pt-2`}
+              className={`${
+                openedList.navigation ? "" : "hidden"
+              } md:block pt-2`}
             >
               <ul className="list-none">
                 <li>
-                  <NavLink to="/" className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500">
+                  <NavLink
+                    to="/"
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                  >
                     Alişveriş Sayfası
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="/categories/cloth-bags">
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to="/categories/cloth-bags"
+                  >
                     Bez Çantalar
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="/categories/shoes">
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to="/categories/shoes"
+                  >
                     Ayakkabılar
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="/categories/bottles">
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to="/categories/bottles"
+                  >
                     Mataralar
                   </NavLink>
                 </li>
@@ -92,33 +116,42 @@ const Footer = () => {
               }
               className="flex flex-row justify-between items-center"
             >
-              <h3 className="text-[14px] font-semibold md:text-[17px]">Legal</h3>
+              <h3 className="text-[14px] font-semibold md:text-[17px]">
+                Legal
+              </h3>
               <Plus
-                className={`${openedList.legal ? "hidden opacity-0" : ""} transition-opacity duration-500 md:hidden navbar-plus`}
+                className={`${
+                  openedList.legal ? "hidden opacity-0" : ""
+                } transition-opacity duration-500 md:hidden navbar-plus`}
                 size={14}
                 weight="bold"
               />
               <Minus
-                className={`${openedList.legal ? "" : "hidden opacity-0"}  md:hidden`}
+                className={`${
+                  openedList.legal ? "" : "hidden opacity-0"
+                }  md:hidden`}
                 size={14}
                 weight="bold"
               />
             </div>
             {/* Links */}
-            <div className={`${openedList.legal ? "" : "hidden"} md:block md:pt-2`}>
+            <div
+              className={`${openedList.legal ? "" : "hidden"} md:block md:pt-2`}
+            >
               <ul className="list-none">
                 <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="">
-                    SSS
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="">
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to=""
+                  >
                     Hakkımızda
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500" to="">
+                  <NavLink
+                    className="hover:font-semibold md:text-[16px] cool-link text-[13px] text-gray-500"
+                    to=""
+                  >
                     Blog
                   </NavLink>
                 </li>

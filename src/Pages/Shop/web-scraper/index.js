@@ -21,33 +21,31 @@ const url8 =
 const url9 = "https://www.mxZataramasu.co/collections/tum-suco-mataralar";
 const url10 = "https://www.mataramasu.co/collections/tum-suco-mataralar?page=2";
 const url11 = "https://www.mizunotr.com/surdurulebilir?ps=8";
+const bottles = "./JSON/SuCo/scrapedDataSuCoBottles.json";
 
 const imageUrls = [];
 
-axios(url11)
+fetch(bottles)
+.then(data => data.json())
   .then((resp) => {
-    const html = resp.data;
-    const $ = cheerio.load(html);
-    $(".productItem").each(function (id) {
-      console.log("running");
-      const title =$(this).find(".text-description")
-          .text()
-          .trim()
-      const url =
-        $(this).find(".imgInner").find("img").attr("data-src");
-      const price =
-        $(this)
-          .find(".currentPrice")
-          .text()
-          .trim()
-      imageUrls.push({ title, url, price, id });
-    });
-    console.log(imageUrls);
-    const jsonContent = JSON.stringify(imageUrls);
+    const randObjlList = [];
+    const randNums = [];
+    
+    for (let index = 0; index < 10; index++) {
+      let randNum = Math.floor(Math.random() * 54);
+ 
+      while (randNums.includes(randNum)) {
+        randNum = Math.floor(Math.random() * 54);
+      }
+      randNums.push(randNum)
+      randObjlList.push(resp[randNum]);
+    }
+    
+    const json = JSON.stringify(randObjlList);
 
     fs.writeFile(
-      "./scrapedDataShoes.json",
-      jsonContent,
+      "./scrapedDataFirstHorScroll.json",
+      json,
       "utf8",
       function (err) {
         if (err) {

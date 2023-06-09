@@ -20,7 +20,7 @@ const Bottles = () => {
   
   useEffect(() => {
     search = searchParams.get("search")  
-    setFilteredBottles(search ? bottles.filter((bottle) => bottle.title.includes(search)): bottles)
+    setFilteredBottles(search ? bottles.filter((bottle) => bottle.title.toLocaleUpperCase().includes(search.toLocaleUpperCase())): bottles)
   }, [searchParams.get("search")]);
 
   return (
