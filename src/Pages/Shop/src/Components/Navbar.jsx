@@ -35,6 +35,7 @@ const Navbar = ({
   const navigate = useNavigate();
   const [accountOpen, setAccountOpen] = useState(false);
   const pathname = useLocation().pathname;
+  const discount = Number(searchParams.get("discount")) || 0;
 
   // find Total Value for each item then store in the list
   let totalValues = [];
@@ -86,7 +87,7 @@ const Navbar = ({
                 <NavLink
                   onClick={() => {
                     setHamburgerState(false);
-                    setAccountOpen(false)
+                    setAccountOpen(false);
                   }}
                   to="/categories/cloth-bags"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold w-fit h-fit"
@@ -96,7 +97,7 @@ const Navbar = ({
                 <NavLink
                   onClick={() => {
                     setHamburgerState(false);
-                    setAccountOpen(false)
+                    setAccountOpen(false);
                   }}
                   to="/categories/shoes"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold"
@@ -106,7 +107,7 @@ const Navbar = ({
                 <NavLink
                   onClick={() => {
                     setHamburgerState(false);
-                    setAccountOpen(false)
+                    setAccountOpen(false);
                   }}
                   to="/categories/bottles"
                   className="cool-link py-2 hover:text-green-600 hover:font-semibold"
@@ -119,7 +120,7 @@ const Navbar = ({
               to="/"
               onClick={() => {
                 setHamburgerState(false);
-                setAccountOpen(false)
+                setAccountOpen(false);
               }}
               className="flex flex-col justify-center items-center md:justify-normal  md:flex-row md:items-center md:gap-5"
             >
@@ -218,21 +219,27 @@ const Navbar = ({
                 <div className="border-t-2 pt-5 flex flex-col px-5 gap-7">
                   <div className="flex flex-row justify-between">
                     <h4 className="font-semibold text-[16px]">Toplam</h4>
+                    {searchParams.get("discount") && (
+                      <h4 className="font-semibold text-[16px] text-red-700">Discount: {discount}%</h4>
+                    )}
                     <h4 className="font-semibold text-[16px]">
-                      {`${totalValues
-                        .reduce(
-                          (accumulator, currentValue) =>
-                            accumulator + Number(currentValue),
-                          0
-                        )
-                        .toFixed(2)}`.replace(/[.]/g, ",")}{" "}
+                      {`${(
+                        totalValues
+                          .reduce(
+                            (accumulator, currentValue) =>
+                              accumulator + Number(currentValue),
+                            0
+                          )
+                          .toFixed(2) *
+                        ((100 - discount) / 100)
+                      ).toFixed(2)}`.replace(/[.]/g, ",")}{" "}
                       TL
                     </h4>
                   </div>
                   <div className="grid grid-cols-2 gap-5">
                     <button
                       onClick={() => {
-                        navigate("/shop-basket");
+                        navigate(`/shop-basket${discount ? "?discount="+discount : "" }`);
                         setShoppingCardOpened(false);
                       }}
                       className="bg-black text-white hover:opacity-70 font-semibold p-3 px-4 rounded-sm"

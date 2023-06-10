@@ -3,11 +3,12 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import BasketCard from "../Components/BasketCard";
 
 const ShopBasket = () => {
-  const { basket } = useOutletContext();
+  const { basket, searchParamsList } = useOutletContext();
   const [basketProducts, dispatchBasketProducts] = basket;
   const navigate = useNavigate();
   let totalValues = [];
-
+  const [searchParams, setSearchParams] = searchParamsList
+  const discount = Number(searchParams.get("discount")) || 0
   basketProducts.forEach((product) => {
     let total =
       product.number *
@@ -25,6 +26,7 @@ const ShopBasket = () => {
       <div>
         <h1 className="font-semibold px-5 text-[25px] md:text-[28px]">Sepet</h1>
       </div>
+      {searchParams.get("discount") && <h3 className="font-semibold text-[16px] px-5">You got <span className="text-red-700">{discount}%</span> dicount.</h3> }
       {/* Sepetteki Ürünler */}
       {JSON.stringify(basketProducts) != JSON.stringify([]) ? (
         <div>
@@ -58,10 +60,10 @@ const ShopBasket = () => {
                 Toplam
               </h4>
               <h4 className="font-semibold text-[16px] md:text-[18px]">
-                {`${totalValues.reduce(
+                {`${(totalValues.reduce(
                   (accumulator, currentValue) => (accumulator) + Number(currentValue),
                   0
-                ).toFixed(2)}`.replace(/[.]/g, ",")}{" "}
+                ).toFixed(2) * ((100-discount)/100)).toFixed(2)}`.replace(/[.]/g, ",")}{" "}
                 TL
               </h4>
             </div>
