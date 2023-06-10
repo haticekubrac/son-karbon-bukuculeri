@@ -93,6 +93,8 @@ function Layout() {
   const loggedIn = localStorage.getItem("loggedIn") || false;
   const [searchParams, setSearchParams] = useSearchParams();
   let isLoggedIn = localStorage.getItem("isLoggedIn") || false
+  localStorage.setItem("isLoggedIn", isLoggedIn)
+  
   
   return (
     <div className="">

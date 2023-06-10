@@ -3,15 +3,21 @@ import { CaretRight } from "@phosphor-icons/react";
 import Case from "/mac-box.png";
 import HorizontalScroll from "../Components/HorizontalScroll";
 import Footer from "../Components/Footer";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 
-async function HomePageLoader() {
-  const firstScrollData = await fetch("../../web-scraper/scrapedDataFirstHorScroll.json")
+export async function HomePageLoader() {
+  const firstScrollDataFetch = await fetch("../../web-scraper/JSON/SuCo/scrapedDataFirstHorScroll.json")
+  const firstScrollData = await firstScrollDataFetch.json()
+  const secondScrollDataFetch = await fetch("../../web-scraper/JSON/SuCo/scrapedDataSecondHorScroll.json")
+  const secondScrollData = await secondScrollDataFetch.json()
+  return {firstScrollData, secondScrollData}
 }
 
 
 
 const HomePage = () => {
+  const {firstScrollData, secondScrollData} = useLoaderData()
+ 
   return (
     <main className="bg-gray-100">
       {/* Showcases */}
@@ -133,12 +139,14 @@ const HomePage = () => {
           paragraph={
             "Müşterilerimiz tarafından en çok tercih edilen aşağıda sıralanmıştır. Alttaki ürünler, aradıklarınızı daha hızlı bulmanızı sağlayabilir."
           }
+          bottles={firstScrollData}
         />
         <HorizontalScroll
           header={"Tasarımcılarımızın Önerdikleri"}
           paragraph={
             "Aşağıda gördükleriniz tasarımcılarımız tarafından en çok beğenilen ürünlerden oluşmaktadır. Tasarımcılarımızın bu ürünleri seçerken kalite, ömrü, renk kalitesi ve daha pek çok özelliği dikkate almıştır."
           }
+          bottles={secondScrollData}
         />
       </div>
     </main>

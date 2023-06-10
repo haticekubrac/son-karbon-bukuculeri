@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Card from "./Card";
 import { CaretRight, CaretLeft } from "@phosphor-icons/react";
 
-const HorizontalScroll = ({ header, paragraph, data }) => {
+const HorizontalScroll = ({ header, paragraph, bottles }) => {
   const scrollHorizontalContainer = useRef(null);
 
   function scrollRight() {
@@ -12,6 +12,8 @@ const HorizontalScroll = ({ header, paragraph, data }) => {
       scrollHorizontalContainer.current.scrollLeft += 220;
     }
   }
+
+
 
   function scrollLeft() {
     if (window.innerWidth > 1000) {
@@ -37,26 +39,8 @@ const HorizontalScroll = ({ header, paragraph, data }) => {
           ref={scrollHorizontalContainer}
           className="flex scroll-smooth flex-row flex-nowrap gap-5 overflow-x-scroll scrollbar-hide"
         >
-          {[
-            {
-              title: "Water SuCo - 600 ml",
-              url: "https://cdn.shopify.com/s/files/1/0811/0945/products/water-on.jpg?v=1671782266&width=1200",
-              price: "235,00TL",
-              id: 53,
-            },
-            {
-              title: "Make A Wish Ocean SuCo - 600 ml",
-              url: "https://cdn.shopify.com/s/files/1/0811/0945/products/make-a-wish-suco-website.jpg?v=1679399621&width=1200",
-              price: "255,00TL",
-              id: 54,
-            },
-          ].map((element, index) => {
-            <Card
-              key={index}
-              price={element.price}
-              productName={element.title}
-              img={element.url}
-            />;
+          {bottles.map(bottle => {
+            return <Card price={bottle.price} key={bottle.id} productName={bottle.title} img={bottle.url}  />
           })}
         </div>
         <div className="hidden sm:block absolute w-full">

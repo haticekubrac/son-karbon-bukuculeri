@@ -24,13 +24,14 @@ import { loader as shoesLoader } from "./Pages/Shoes";
 import { loader as accessoriesLoader } from "./Pages/Accessories";
 import { loader as checkoutLoader } from "./Pages/Checkout";
 import { loginAction } from "./Pages/Login";
+import { HomePageLoader } from "./Pages/HomePage";
 
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />} path="/">
-      <Route index element={<HomePage />} />
+      <Route index element={<HomePage />} loader={HomePageLoader} />
       <Route path="categories">
         <Route
           element={<ClothBags />}

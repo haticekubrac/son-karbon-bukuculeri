@@ -4,13 +4,6 @@ export async function requireAuth(request) {
   const pathname = new URL(request.url).pathname;
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-  console.log(
-    isLoggedIn,
-    typeof isLoggedIn,
-    isLoggedIn === "false",
-    isLoggedIn == "false"
-  );
-
   if (isLoggedIn === "false") {
     throw redirect(
       `/log-in?message=Oncesinde oturum acmaniz gerekmektedir.&redirectTo=${pathname}`
