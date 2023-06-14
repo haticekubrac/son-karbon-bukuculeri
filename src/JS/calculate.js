@@ -1,4 +1,3 @@
-import { app } from "../Pages/Shop-v2-/src/firebaseConfig";
 
 function generateCupon(percentage) {
   var randomCupon = "";
