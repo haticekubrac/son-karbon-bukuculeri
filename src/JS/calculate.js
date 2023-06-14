@@ -53,7 +53,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 12;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -72,7 +72,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 10;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -90,7 +90,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 9;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -106,7 +106,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 7;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -121,7 +121,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 6;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -134,7 +134,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 4;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world2").style.display = "block";
@@ -146,7 +146,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 1;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = generateCupon(oran);
+  document.getElementById("discount-cupon").innerText = await generateCupon(oran);
   document.getElementById("discount").style.display = "block";
   document.getElementById("world1").style.display = "block";
   document.getElementById("world1.0.5").style.display = "block";
