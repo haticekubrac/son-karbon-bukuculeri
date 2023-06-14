@@ -77,6 +77,7 @@ const LogIn = () => {
         <div className="flex flex-col gap-3 w-full max-w-lg">
           <div className="relative">
             <input
+              required
               id="email"
               name="email"
               type="email"
@@ -92,6 +93,7 @@ const LogIn = () => {
           </div>
           <div className="relative mt-5">
             <input
+              required
               id="password"
               name="password"
               type="password"

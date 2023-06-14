@@ -68,7 +68,7 @@ export async function signUpAction({ request }) {
         : "/shop-basket/checkout"
     );
   } else {
-    return "This email already in use. Please try a different email.";
+    return "Girdiğiniz e-posta adresi kullanımdadır, lütfen başka bir e-posta adresi giriniz."
   }
 }
 
@@ -103,6 +103,7 @@ const SignUp = () => {
                 type="text"
                 className="peer h-10  bg-slate-100 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-sky-500"
                 placeholder=" "
+                required
               />
               <label
                 htmlFor="name"
@@ -118,6 +119,7 @@ const SignUp = () => {
                 type="text"
                 className="peer h-10  bg-slate-100 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-sky-500"
                 placeholder=" "
+                required
               />
               <label
                 htmlFor="surname"
@@ -134,6 +136,7 @@ const SignUp = () => {
               type="email"
               className="peer h-10 w-full bg-slate-100 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-sky-500"
               placeholder=" "
+              required
             />
             <label
               htmlFor="email"
@@ -149,6 +152,7 @@ const SignUp = () => {
               type="password"
               className="peer h-10  bg-slate-100 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-sky-500"
               placeholder=" "
+              required
             />
             <label
               htmlFor="password"
