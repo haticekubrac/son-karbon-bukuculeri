@@ -4,6 +4,7 @@ import {
   useOutletContext,
   useActionData,
   redirect,
+  useNavigation,
 } from "react-router-dom";
 
 import { app } from "../firebaseConfig";
@@ -42,7 +43,10 @@ export async function loginAction({ request }) {
           : "/shop-basket/checkout"
       );
     } else {
-      return { message: "Zaten oturumunuz açık durumdadır, giriş yapmanıza gerek yoktur." };
+      return {
+        message:
+          "Zaten oturumunuz açık durumdadır, giriş yapmanıza gerek yoktur.",
+      };
     }
   } else {
     return {
@@ -56,6 +60,7 @@ const LogIn = () => {
   const { searchParamsList } = useOutletContext();
   const [searchParams, setSearchParams] = searchParamsList;
   const message = useActionData();
+  const navigation = useNavigation();
   return (
     <main className="py-28 pb-48 px-6 bg-slate-100">
       {message && (
@@ -113,7 +118,11 @@ const LogIn = () => {
               type="submit"
               className="bg-gray-900 hover:bg-gray-700 text-white w-full font-bold p-4 rounded-3xl"
             >
-              Giriş Yap
+              {navigation.state === "submitting"
+                ? "Giriş Yapılıyor..."
+                : navigation.state === "loading"
+                ? "Giriş Yapıldı!"
+                : "Giriş Yap"}
             </button>
           </div>
         </div>
