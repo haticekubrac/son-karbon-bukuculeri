@@ -13,7 +13,7 @@ async function generateCupon(percentage) {
     randomCupon += characters[Math.floor(Math.random() * 16)];
   }
 
-  await setDoc(doc(db, "userCupons", randomCupon), {
+  setDoc(doc(db, "userCupons", randomCupon), {
     code: randomCupon,
     percentage,
   });
