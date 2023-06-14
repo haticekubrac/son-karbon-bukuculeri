@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cool-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: green;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.cool-link-not-found {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cool-link-not-found::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: orange;
+  transition: width 0.3s;
+}
+
+.cool-link-not-found:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.min-showcase-img {
+  height: calc((100vh - 150px));
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.min-height-basket {
+  height: calc((100vh - 225px));
+}
+
+@media screen and (min-width: 768px) {
+  .min-height-basket {
+    height: calc((100vh - 250px));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .left-showcase-img {
+    height: calc((100vh - 200px) + 100px);
+  }
+  .right-showcase-img {
+    height: calc((100vh - 200px) / 2 - 0.75rem + 50px);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 200px 200px rgb(241 245 249 / var(--tw-bg-opacity)) inset;
+  box-shadow: 200px 200px 100px rgb(241 245 249 / var(--tw-bg-opacity)) inset;
+}
+
+.card-button-opacity-trasnsition {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.shop-basket-navbar {
+  height: calc(100vh - 80px);
+}
+
+.productname-span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
