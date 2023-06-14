@@ -1,14 +1,30 @@
+import { app } from "../Pages/Shop-v2-/src/firebaseConfig";
+import { getFirestore } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
-function generateCupon(percentage) {
+const db = getFirestore(app);
+
+async function generateCupon(percentage) {
+  
   let randomCupon = "";
   let characters = "0123456789abcdef";
-
+  
   // Run for loop to generate Cupon randomly
   for (let i = 0; i < 9; i++) {
     randomCupon += characters[Math.floor(Math.random() * 16)];
   }
-
-  return randomCupon
+  
+  try {
+    const docRef = await addDoc(collection(db, "cupons"), {
+      percentage,
+      code: randomCupon,
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+  
+  return randomCupon;
 }
 
 function sum(a, b, c, d) {
