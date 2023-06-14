@@ -1,11 +1,11 @@
 
 function generateCupon(percentage) {
-  var randomCupon = "";
-  var characters = "0123456789abcdef";
+  let randomCupon = "";
+  let characters = "0123456789abcdef";
   const percentage = percentage;
 
   // Run for loop to generate Cupon randomly
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 9; i++) {
     randomCupon += characters[Math.floor(Math.random() * 16)];
   }
 
