@@ -42,7 +42,7 @@ export async function loginAction({ request }) {
           : "/shop-basket/checkout"
       );
     } else {
-      return { message: "You already logged in." };
+      return { message: "Zaten oturumunuz açık durumdadır, giriş yapmanıza gerek yoktur." };
     }
   } else {
     return {
