@@ -1,16 +1,16 @@
 
-function generateCupon(percentage) {
-  var randomCupon = "";
-  var characters = "0123456789abcdef";
-  const percentage = percentage;
+// function generateCupon(percentage) {
+//   var randomCupon = "";
+//   var characters = "0123456789abcdef";
+//   const percentage = percentage;
 
-  // Run for loop to generate Cupon randomly
-  for (let i = 0; i < 6; i++) {
-    randomCupon += characters[Math.floor(Math.random() * 16)];
-  }
+//   // Run for loop to generate Cupon randomly
+//   for (let i = 0; i < 6; i++) {
+//     randomCupon += characters[Math.floor(Math.random() * 16)];
+//   }
 
-  return randomCupon
-}
+//   return randomCupon
+// }
 
 function sum(a, b, c, d) {
   return a + b + c + d;
