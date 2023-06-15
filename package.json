@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "Bu sayfa karbon ayak izi hesaplamak ve karbon ayak izi, geri dönüşüm vb. konular hakkında insanları bilinçlendirmek amacıyla tasarlanmıştır.",
   "main": "index.js",
-  "type": "module",
+  "dependencies": {
+    "esbuild": "^0.17.19",
+    "nanoid": "^3.3.6",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.24",
+    "rollup": "^3.25.1",
+    "source-map-js": "^1.0.2",
+    "vite": "^4.3.9"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "firebase": "^9.22.2"
-  }
+  "license": "ISC"
 }

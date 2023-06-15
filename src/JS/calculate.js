@@ -1,6 +1,23 @@
-import { app } from "../Pages/Shop-v2-/src/firebaseConfig";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBRKlvpVuVLZDx--1TAP2EuYF2A5AvtOvQ",
+  authDomain: "cw-shop-v2.firebaseapp.com",
+  projectId: "cw-shop-v2",
+  storageBucket: "cw-shop-v2.appspot.com",
+  messagingSenderId: "1001166916253",
+  appId: "1:1001166916253:web:9f8b5064a9921126972274",
+};
+
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
+
 const db = getFirestore(app);
-import { doc, setDoc } from "firebase/firestore";
 
 function generateCoupon(percentage) {
   let randomCoupon = "";
