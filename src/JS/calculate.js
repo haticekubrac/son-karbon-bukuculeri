@@ -17,23 +17,32 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 
+
 const db = getFirestore(app);
 
 function generateCoupon(percentage) {
-  let randomCoupon = "";
-  let characters = "0123456789abcdefABCDEF";
+  let userCouponGenerated = false || localStorage.getItem("userCoupon");
+  if (userCouponGenerated) {
+      let randomCoupon = "";
+      let characters = "0123456789abcdefABCDEF";
 
-  // Run for loop to generate coupon randomly
-  for (let i = 0; i < 7; i++) {
-    randomCoupon += characters[Math.floor(Math.random() * 22)];
+      // Run for loop to generate coupon randomly
+      for (let i = 0; i < 7; i++) {
+        randomCoupon += characters[Math.floor(Math.random() * 22)];
+      }
+
+      localStorage.setItem("userCoupon", randomCoupon)
+      
+      setDoc(doc(db, "userCoupons", randomCoupon), {
+        code: randomCoupon,
+        percentage,
+      });
+
+      return randomCoupon;
   }
 
-  setDoc(doc(db, "userCoupons", randomCoupon), {
-    code: randomCoupon,
-    percentage,
-  });
-
-  return randomCoupon;
+  return userCouponGenerated
+  
 }
 
 function sum(a, b, c, d) {
