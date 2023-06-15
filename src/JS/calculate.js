@@ -53,6 +53,9 @@ localStorage.setItem("toplamDeger", toplamSonuc);
 
 // DUNYA SAYISI
 var dunyaSayisi;
+var yarimDunya;
+
+
 
 // İndirim oranı değişkeni
 var oran;
