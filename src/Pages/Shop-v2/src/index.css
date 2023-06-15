@@ -94,3 +94,7 @@ input:-webkit-autofill {
   overflow: hidden !important;
   text-overflow: ellipsis;
 }
+
+.checkout-basket-h {
+  height: calc(100vh - 280px);
+}

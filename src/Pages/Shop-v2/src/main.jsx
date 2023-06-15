@@ -32,6 +32,8 @@ import { loader as checkoutLoader } from "./Pages/Checkout";
 import { loginAction } from "./Pages/Login";
 import { signUpAction } from "./Pages/SignUp";
 import { HomePageLoader } from "./Pages/HomePage";
+import { checkoutAction } from "./Pages/Checkout";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -58,7 +60,7 @@ const router = createBrowserRouter(
       <Route path="sign-up" element={<SignUp />} action={signUpAction} />
       <Route path="shop-basket">
         <Route index element={<ShopBasket />} />
-        <Route path="checkout" element={<Checkout />} loader={checkoutLoader} />
+        <Route path="checkout" element={<Checkout />} action={checkoutAction} loader={checkoutLoader} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>

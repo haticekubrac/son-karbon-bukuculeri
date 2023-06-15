@@ -23,12 +23,15 @@ export async function signUpAction({ request }) {
   const password = formData.get("password");
   const name = formData.get("name");
   const surname = formData.get("surname");
+  var redirectBoolean = false
 
   const auth = getAuth();
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+  await createUserWithEmailAndPassword(auth, email, password)
+    .then(async (userCredential) => {
       // Signed in
       const user = userCredential.user;
+      redirectBoolean = true;
+      
       // ...
     })
     .catch((error) => {
@@ -36,34 +39,23 @@ export async function signUpAction({ request }) {
       const errorMessage = error.message;
       // ..
     });
-
-  updateProfile(auth.currentUser, {
-    displayName: name,
-    surname,
-  })
-    .then(() => {
-      console.log("Profile Added.");
+    await updateProfile(auth.currentUser, {
+      displayName: name,
+      surname,
     })
-    .catch((error) => {
-      // An error occurred
-      // ...
-    });
+      .then(() => {
+        console.log("Profile Added.");
+      })
+      .catch((error) => {
+        // An error occurred
+        // ...
+      });
 
-  let redirect = false;
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const uid = user.uid;
-
-      redirect = true;
-      // https://firebase.google.com/docs/reference/js/auth.user
-      // ...
-    }
-  });
-
-  if (redirect) {
+  if (redirectBoolean) {
+    console.log(redirect)
     localStorage.setItem("isLoggedIn", true);
-    throw redirect(
+    return redirect(
       URLSearchParams.get("redirectTo")
         ? URLSearchParams.get("redirectTo")
         : "/shop-basket/checkout"

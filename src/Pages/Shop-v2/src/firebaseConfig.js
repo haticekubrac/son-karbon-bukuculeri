@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "cw-shop-v2",
   storageBucket: "cw-shop-v2.appspot.com",
   messagingSenderId: "1001166916253",
-  appId: "1:1001166916253:web:9f8b5064a9921126972274",
+  appId: "1:1001166916253:web:9f8b5064a9921126972274"
 };
 
 // Initialize Firebase
