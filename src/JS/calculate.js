@@ -21,7 +21,7 @@ export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function generateCoupon(percentage) {
-  let userCouponGenerated = false || localStorage.getItem("userCoupon");
+  const userCouponGenerated = false || localStorage.getItem("userCoupon");
   if (userCouponGenerated) {
       let randomCoupon = "";
       let characters = "0123456789abcdefABCDEF";
