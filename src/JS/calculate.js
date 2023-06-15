@@ -1,25 +1,37 @@
-import { app } from "../Pages/Shop-v2-/src/firebaseConfig";
-import { getFirestore } from "firebase/firestore";
-import { doc, setDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBRKlvpVuVLZDx--1TAP2EuYF2A5AvtOvQ",
+  authDomain: "cw-shop-v2.firebaseapp.com",
+  projectId: "cw-shop-v2",
+  storageBucket: "cw-shop-v2.appspot.com",
+  messagingSenderId: "1001166916253",
+  appId: "1:1001166916253:web:9f8b5064a9921126972274",
+};
+
+// Initialize Firebase app
+const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-async function generateCupon(percentage) {
-  let randomCupon = "";
+async function generateCoupon(percentage) {
+  let randomCoupon = "";
   let characters = "0123456789abcdefABCDEF";
 
-  // Run for loop to generate Cupon randomly
-  for (let i = 0; i < 9; i++) {
-    randomCupon += characters[Math.floor(Math.random() * 16)];
+  // Run for loop to generate coupon randomly
+  for (let i = 0; i < 7; i++) {
+    randomCoupon += characters[Math.floor(Math.random() * 22)];
   }
 
-  setDoc(doc(db, "userCupons", randomCupon), {
-    code: randomCupon,
+  await setDoc(doc(db, "userCoupons", randomCoupon), {
+    code: randomCoupon,
     percentage,
   });
 
-  return randomCupon;
+  return randomCoupon;
 }
+
 
 function sum(a, b, c, d) {
   return a + b + c + d;
@@ -31,6 +43,7 @@ var toplamSonuc = sum(
   parseInt(localStorage.getItem("enerjiDeger")),
   parseInt(localStorage.getItem("atıkDeger"))
 );
+
 console.log(toplamSonuc);
 
 localStorage.setItem("toplamDeger", toplamSonuc);
@@ -47,7 +60,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 12;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -68,7 +81,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 10;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -88,7 +101,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 9;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -106,7 +119,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 7;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -123,7 +136,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 6;
   yarimDunya = 0;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -138,7 +151,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 4;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
@@ -152,7 +165,7 @@ if (toplamSonuc === 0) {
   dunyaSayisi = 1;
   yarimDunya = 5;
   document.getElementById("discount-percentage").innerText = oran.toString();
-  document.getElementById("discount-cupon").innerText = await generateCupon(
+  document.getElementById("discount-cupon").innerText = await generateCoupon(
     oran
   );
   document.getElementById("discount").style.display = "block";
