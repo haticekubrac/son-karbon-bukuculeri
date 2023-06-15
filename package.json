@@ -1,0 +1,15 @@
+{
+  "name": "son-karbon-bukuculeri",
+  "version": "1.0.0",
+  "description": "Bu sayfa karbon ayak izi hesaplamak ve karbon ayak izi, geri dönüşüm vb. konular hakkında insanları bilinçlendirmek amacıyla tasarlanmıştır.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.22.2"
+  }
+}
